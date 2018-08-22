@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+	<title>Fashion Vogue</title>
+	<meta charset="utf-8">
+	<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animations.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+	<!--[if lt IE 9]>
+		<script src="js/vendor/html5shiv.min.js"></script>
+		<script src="js/vendor/respond.min.js"></script>
+		<script src="js/vendor/jquery-1.12.4.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+	<!--[if lt IE 9]>
+		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
+	<![endif]-->
+
+	<div class="preloader">
+		<div class="preloader_image"></div>
+	</div>
+
+	<!-- search modal -->
+	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">
+				<i class="rt-icon2-cross2"></i>
+			</span>
+		</button>
+		<div class="widget widget_search">
+			<form method="get" class="searchform search-form form-inline" action="./">
+				<div class="form-group">
+					<input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+				</div>
+				<button type="submit" class="theme_button">Search</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Unyson messages modal -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+		<div class="fw-messages-wrap ls with_padding">
+			<!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+			<!--
+		<ul class="list-unstyled">
+			<li>Message To User</li>
+		</ul>
+		-->
+
+		</div>
+	</div>
+	<!-- eof .modal -->
+
+	<!-- wrappers for visual page editor and boxed version of template -->
+	<div id="canvas">
+		<div id="box_wrapper">
+
+			<!-- template sections -->
+
+			<header class="page_header header_darkgrey header_logo_center">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-12 text-md-center">
+							<div class="logo_wrapper">
+								<a href="./" class="logo top_logo">
+									<img src="images/logo.png" alt="">
+								</a>
+							</div>
+							<!-- header toggler -->
+							<span class="toggle_menu">
+								<span></span>
+							</span>
+							<!-- main nav start -->
+							<nav class="mainmenu_wrapper">
+								<ul class="mainmenu nav sf-menu">
+									<li class="active">
+										<a href="index.html">Home</a>
+										<ul>
+											<li>
+												<a href="index.html">MultiPage</a>
+											</li>
+											<li>
+												<a href="index_static.html">Static Intro</a>
+											</li>
+											<li>
+												<a href="index_singlepage.html">Single Page</a>
+											</li>
+											<li>
+												<a href="admin_index.html">Admin Dashboard</a>
+											</li>
+										</ul>
+									</li>
+
+									<li>
+										<a href="about.html">Pages</a>
+										<ul>
+											<!-- features -->
+											<li>
+												<a href="shortcodes_teasers.html">Shortcodes &amp; Widgets</a>
+												<ul>
+													<li>
+														<a href="shortcodes_typography.html">Typography</a>
+													</li>
+													<li>
+														<a href="shortcodes_buttons.html">Buttons</a>
+													</li>
+													<li>
+														<a href="shortcodes_teasers.html">Teasers</a>
+													</li>
+													<li>
+														<a href="shortcodes_progress.html">Progress</a>
+													</li>
+													<li>
+														<a href="shortcodes_tabs.html">Tabs &amp; Collapse</a>
+													</li>
+													<li>
+														<a href="shortcodes_bootstrap.html">Bootstrap Elements</a>
+													</li>
+													<li>
+														<a href="shortcodes_widgets.html">Widgets</a>
+													</li>
+													<li>
+														<a href="shortcodes_animation.html">Animation</a>
+													</li>
+													<li>
+														<a href="shortcodes_icons.html">Template Icons</a>
+													</li>
+													<li>
+														<a href="shortcodes_socialicons.html">Social Icons</a>
+													</li>
+												</ul>
+											</li>
+											<!-- eof features -->
+
+											<!-- blog -->
+											<li>
+												<a href="blog-right.html">Blog</a>
+												<ul>
+
+													<li>
+														<a href="blog-right.html">Right Sidebar</a>
+													</li>
+													<li>
+														<a href="blog-left.html">Left Sidebar</a>
+													</li>
+													<li>
+														<a href="blog-full.html">No Sidebar</a>
+													</li>
+													<li>
+														<a href="blog-mosaic.html">Blog Grid</a>
+													</li>
+
+													<li>
+														<a href="blog-single-right.html">Post</a>
+														<ul>
+															<li>
+																<a href="blog-single-right.html">Right Sidebar</a>
+															</li>
+															<li>
+																<a href="blog-single-left.html">Left Sidebar</a>
+															</li>
+															<li>
+																<a href="blog-single-full.html">No Sidebar</a>
+															</li>
+														</ul>
+													</li>
+
+													<li>
+														<a href="blog-single-video-right.html">Video Post</a>
+														<ul>
+															<li>
+																<a href="blog-single-video-right.html">Right Sidebar</a>
+															</li>
+															<li>
+																<a href="blog-single-video-left.html">Left Sidebar</a>
+															</li>
+															<li>
+																<a href="blog-single-video-full.html">No Sidebar</a>
+															</li>
+														</ul>
+													</li>
+
+												</ul>
+											</li>
+											<!-- eof blog -->
+
+											<li>
+												<a href="about.html">About</a>
+											</li>
+
+											<li>
+												<a href="pricing.html">Pricing</a>
+											</li>
+
+											<li>
+												<a href="timetable.html">Timetable</a>
+											</li>
+
+											<!-- shop -->
+											<li>
+												<a href="shop-right.html">Shop</a>
+												<ul>
+													<li>
+														<a href="shop-right.html">Shop</a>
+													</li>
+													<li>
+														<a href="shop-product-right.html">Single Product</a>
+													</li>
+													<li>
+														<a href="shop-cart-right.html">Shopping Cart</a>
+													</li>
+													<li>
+														<a href="shop-checkout-right.html">Checkout</a>
+													</li>
+													<li>
+														<a href="shop-register.html">Registration</a>
+													</li>
+												</ul>
+											</li>
+											<!-- eof shop -->
+
+
+											<!-- events -->
+											<li>
+												<a href="events-left.html">Events</a>
+												<ul>
+													<li>
+														<a href="events-left.html">Left Sidebar</a>
+													</li>
+													<li>
+														<a href="events-right.html">Right Sidebar</a>
+													</li>
+													<li>
+														<a href="events-full.html">Full Width</a>
+													</li>
+													<li>
+														<a href="event-single-left.html">Single Event</a>
+														<ul>
+															<li>
+																<a href="event-single-left.html">Left Sidebar</a>
+															</li>
+															<li>
+																<a href="event-single-right.html">Right Sidebar</a>
+															</li>
+															<li>
+																<a href="event-single-full.html">Full Width</a>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<!-- eof events -->
+
+											<li>
+												<a href="team.html">Team</a>
+												<ul>
+													<li>
+														<a href="team.html">Team 1</a>
+													</li>
+													<li>
+														<a href="team2.html">Team 2</a>
+													</li>
+													<li>
+														<a href="team-single.html">Team Member</a>
+													</li>
+												</ul>
+											</li>
+
+
+											<li>
+												<a href="comingsoon1.html">Comingsoon</a>
+												<ul>
+													<li>
+														<a href="comingsoon1.html">Comingsoon</a>
+													</li>
+													<li>
+														<a href="comingsoon2.html">Comingsoon 2</a>
+													</li>
+												</ul>
+											</li>
+
+											<li>
+												<a href="faq.html">FAQ</a>
+												<ul>
+													<li>
+														<a href="faq.html">FAQ</a>
+													</li>
+													<li>
+														<a href="faq2.html">FAQ 2</a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a href="404.html">404</a>
+												<ul>
+													<li>
+														<a href="404.html">404</a>
+													</li>
+													<li>
+														<a href="4042.html">404 2</a>
+													</li>
+												</ul>
+											</li>
+
+										</ul>
+									</li>
+									<!-- eof pages -->
+
+									<li>
+										<a href="#">Features</a>
+										<div class="mega-menu">
+											<ul class="mega-menu-row">
+												<li class="mega-menu-col">
+													<a href="#">Headers</a>
+													<ul>
+														<li>
+															<a href="header1.html">Header Type 1</a>
+														</li>
+														<li>
+															<a href="header2.html">Header Type 2</a>
+														</li>
+														<li>
+															<a href="header3.html">Header Type 3</a>
+														</li>
+														<li>
+															<a href="header4.html">Header Type 4</a>
+														</li>
+														<li>
+															<a href="header5.html">Header Type 5</a>
+														</li>
+														<li>
+															<a href="header6.html">Header Type 6</a>
+														</li>
+													</ul>
+												</li>
+												<li class="mega-menu-col">
+													<a href="#">Side Menus</a>
+													<ul>
+														<li>
+															<a href="header_side1.html">Slide Left Light</a>
+														</li>
+														<li>
+															<a href="header_side2.html">Slide Right Light</a>
+														</li>
+														<li>
+															<a href="header_side3.html">Push Left Light</a>
+														</li>
+														<li>
+															<a href="header_side4.html">Push Right Light</a>
+														</li>
+														<li>
+															<a href="header_side5.html">Slide Left Dark</a>
+														</li>
+														<li>
+															<a href="header_side6.html">Slide Right Dark</a>
+														</li>
+														<li>
+															<a href="header_side7.html">Push Left Dark</a>
+														</li>
+														<li>
+															<a href="header_side8.html">Push Right Dark</a>
+														</li>
+														<li>
+															<a href="header_side_superfish.html">Superfish Menu</a>
+														</li>
+														<li>
+															<a href="header_side_sticked.html">Sticked Menu</a>
+														</li>
+													</ul>
+												</li>
+												<li class="mega-menu-col">
+													<a href="breadcrumbs1.html">Breadcrumbs</a>
+													<ul>
+														<li>
+															<a href="breadcrumbs1.html">Breadcrumbs 1</a>
+														</li>
+														<li>
+															<a href="breadcrumbs2.html">Breadcrumbs 2</a>
+														</li>
+														<li>
+															<a href="breadcrumbs3.html">Breadcrumbs 3</a>
+														</li>
+														<li>
+															<a href="breadcrumbs4.html">Breadcrumbs 4</a>
+														</li>
+														<li>
+															<a href="breadcrumbs5.html">Breadcrumbs 5</a>
+														</li>
+														<li>
+															<a href="breadcrumbs6.html">Breadcrumbs 6</a>
+														</li>
+													</ul>
+												</li>
+												<li class="mega-menu-col">
+													<a href="footer1.html">Footers</a>
+													<ul>
+														<li>
+															<a href="footer1.html">Footer Type 1</a>
+														</li>
+														<li>
+															<a href="footer2.html">Footer Type 2</a>
+														</li>
+														<li>
+															<a href="footer3.html">Footer Type 3</a>
+														</li>
+														<li>
+															<a href="footer4.html">Footer Type 4</a>
+														</li>
+														<li>
+															<a href="footer5.html">Footer Type 5</a>
+														</li>
+														<li>
+															<a href="footer6.html">Footer Type 6</a>
+														</li>
+														<li>
+															<a href="footer7.html">Footer Type 7</a>
+														</li>
+													</ul>
+												</li>
+												<li class="mega-menu-col">
+													<a href="copyright1.html">Copyrights</a>
+
+													<ul>
+														<li>
+															<a href="copyright1.html">Copyrights 1</a>
+														</li>
+														<li>
+															<a href="copyright2.html">Copyrights 2</a>
+														</li>
+														<li>
+															<a href="copyright3.html">Copyrights 3</a>
+														</li>
+														<li>
+															<a href="copyright4.html">Copyrights 4</a>
+														</li>
+														<li>
+															<a href="copyright5.html">Copyrights 5</a>
+														</li>
+													</ul>
+												</li>
+
+											</ul>
+										</div>
+										<!-- eof mega menu -->
+									</li>
+									<!-- eof features -->
+
+
+									<!-- gallery -->
+									<li>
+										<a href="gallery-regular.html">Portfolio</a>
+										<ul>
+											<!-- Portfolio regular -->
+											<li>
+												<a href="gallery-regular.html">Portfolio Regular</a>
+												<ul>
+													<li>
+														<a href="gallery-regular.html">1 column</a>
+													</li>
+													<li>
+														<a href="gallery-regular-2-cols.html">2 columns</a>
+													</li>
+													<li>
+														<a href="gallery-regular-3-cols.html">3 columns</a>
+													</li>
+												</ul>
+											</li>
+											<!-- eof Portfolio regular -->
+
+											<!-- Portfolio full width -->
+											<li>
+												<a href="gallery-fullwidth.html">Portfolio Full Width</a>
+												<ul>
+													<li>
+														<a href="gallery-fullwidth.html">2 column</a>
+													</li>
+													<li>
+														<a href="gallery-fullwidth-3-cols.html">3 columns</a>
+													</li>
+													<li>
+														<a href="gallery-fullwidth-4-cols.html">4 columns</a>
+													</li>
+												</ul>
+											</li>
+											<!-- eof Portfolio full width -->
+
+											<!-- Portfolio extended -->
+											<li>
+												<a href="gallery-extended.html">Portfolio Extended</a>
+												<ul>
+													<li>
+														<a href="gallery-extended.html">1 column</a>
+													</li>
+													<li>
+														<a href="gallery-extended-2-cols.html">2 columns</a>
+													</li>
+													<li>
+														<a href="gallery-extended-3-cols.html">3 columns</a>
+													</li>
+												</ul>
+											</li>
+											<!-- eof Portfolio extended -->
+
+											<!-- Portfolio carousel -->
+											<li>
+												<a href="gallery-carousel.html">Portfolio Carousel</a>
+												<ul>
+													<li>
+														<a href="gallery-carousel.html">1 column</a>
+													</li>
+													<li>
+														<a href="gallery-carousel-2-cols.html">2 columns</a>
+													</li>
+													<li>
+														<a href="gallery-carousel-3-cols.html">3 columns</a>
+													</li>
+												</ul>
+											</li>
+											<!-- eof Portfolio carousel -->
+
+											<!-- Portfolio tile -->
+											<li>
+												<a href="gallery-tile.html">Portfolio Tile</a>
+											</li>
+											<!-- eof Portfolio tile -->
+
+											<!-- Portfolio left sidebar -->
+											<li>
+												<a href="gallery-left.html">Portfolio Left Sidebar</a>
+												<ul>
+													<li>
+														<a href="gallery-left.html">1 column</a>
+													</li>
+													<li>
+														<a href="gallery-left-2-cols.html">2 columns</a>
+													</li>
+												</ul>
+											</li>
+											<!-- eof Portfolio left sidebar -->
+
+											<!-- Portfolio right sidebar -->
+											<li>
+												<a href="gallery-right.html">Portfolio Right Sidebar</a>
+												<ul>
+													<li>
+														<a href="gallery-right.html">1 column</a>
+													</li>
+													<li>
+														<a href="gallery-right-2-cols.html">2 columns</a>
+													</li>
+												</ul>
+											</li>
+											<!-- eof Portfolio right sidebar -->
+
+											<!-- Portfolio item -->
+											<li>
+												<a href="gallery-single.html">Portfolio Item</a>
+												<ul>
+													<li>
+														<a href="gallery-single.html">Style 1</a>
+													</li>
+													<li>
+														<a href="gallery-single2.html">Style 2</a>
+													</li>
+													<li>
+														<a href="gallery-single3.html">Style 3</a>
+													</li>
+												</ul>
+											</li>
+											<!-- eof Portfolio item -->
+										</ul>
+									</li>
+									<!-- eof Portfolio -->
+
+									<li>
+										<a href="models.html">Models</a>
+										<ul>
+											<li>
+												<a href="models.html">Models</a>
+											</li>
+											<li>
+												<a href="models2.html">Models 2</a>
+											</li>
+											<li>
+												<a href="model-single.html">Single Model</a>
+											</li>
+										</ul>
+									</li>
+
+									<!-- contacts -->
+									<li>
+										<a href="contact.html">Contact</a>
+										<ul>
+											<li>
+												<a href="contact.html">Contact 1</a>
+											</li>
+											<li>
+												<a href="contact2.html">Contact 2</a>
+											</li>
+											<li>
+												<a href="contact3.html">Contact 3</a>
+											</li>
+											<li>
+												<a href="contact4.html">Contact 4</a>
+											</li>
+										</ul>
+									</li>
+									<!-- eof contacts -->
+								</ul>
+							</nav>
+							<!-- eof main nav -->
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<section class="page_breadcrumbs ds parallax section_padding_75">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<h2>About</h2>
+							<ol class="breadcrumb greylinks">
+								<li>
+									<a href="./">
+							Home
+						</a>
+								</li>
+								<li>
+									<a href="#">Pages</a>
+								</li>
+								<li class="active">About</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="ds ms page_about parallax section_padding_100 columns_padding_25 columns_margin_bottom_30">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<h2 class="section_header">Story of Our Agency</h2>
+							<p class="small-text highlight lusitana">for a chance to join us</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<p class="fontsize_20">
+					Nonumy eirmod tempor invidunt ut labore dolore magna aliquyam erat, sed diam voluptua.
+				</p>
+							<p>
+					Swine brisket pig, ground round andouille salami jowl biltong. Jerky pancetta turducken, landjaeger pig strip steak meatloaf burgdoggen. Frankfurter meatball beef ribs chicken burgdoggen shank.
+				</p>
+							<p>
+					Spare ribs pork chop sirloin ground round kielbasa pork loin shank, burgdoggen sausage fatback turkey pig picanha shankle. Tenderloin andouille chicken shank pig ball tip. Alcatra shoulder ball tip, burgdoggen drumstick capicola sausage tail frankfurter pork loin boudin filet mignon. Bacon pork loin pork chop pig. Tenderloin filet mignon beef, bresaola shoulder pork.
+				</p>
+						</div>
+						<div class="col-md-6">
+							<p class="progress-bar-title small-text lusitana grey">european Models - <span class="highlight">40%</span></p>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" data-transitiongoal="40">
+								</div>
+							</div>
+
+							<p class="progress-bar-title small-text lusitana grey">asian Models - <span class="highlight">20%</span></p>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" data-transitiongoal="20">
+								</div>
+							</div>
+
+							<p class="progress-bar-title small-text lusitana grey">african-american Models - <span class="highlight">30%</span></p>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" data-transitiongoal="30">
+								</div>
+							</div>
+
+							<p class="progress-bar-title small-text lusitana grey">Latin Models - <span class="highlight">10%</span></p>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" data-transitiongoal="10">
+								</div>
+							</div>
+
+							<p class="progress-bar-title small-text lusitana grey">Meatball Models - <span class="highlight">5%</span></p>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" data-transitiongoal="5">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="reviews" class="ds page_testimonials section_padding_100">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1">
+							<div class="owl-carousel" data-responsive-lg="1" data-responsive-md="1" data-responsive-sm="1" data-dots="true">
+
+								<blockquote class="with_quotes text-center">
+									<img src="images/faces/01.jpg" alt="" />
+									<div class="item-meta">
+										<h5>
+											<a href="#">Helen Thompson</a>
+										</h5>
+										<p class="small-text lusitana highlight">photographer</p>
+									</div>
+									Pork loin andouille rump, corned beef bacon kevin venison tail. Tri-tip boudin pig tenderloin ham. Meatloaf cupim picanha pork chop landjaeger pork chicken andouille jerky, shoulder flank turkey.
+								</blockquote>
+
+								<blockquote class="with_quotes text-center">
+									<img src="images/faces/01.jpg" alt="" />
+									<div class="item-meta">
+										<h5>
+											<a href="#">Helen Thompson</a>
+										</h5>
+										<p class="small-text lusitana highlight">photographer</p>
+									</div>
+									Pork loin andouille rump, corned beef bacon kevin venison tail. Tri-tip boudin pig tenderloin ham. Meatloaf cupim picanha pork chop landjaeger pork chicken andouille jerky, shoulder flank turkey.
+								</blockquote>
+
+								<blockquote class="with_quotes text-center">
+									<img src="images/faces/01.jpg" alt="" />
+									<div class="item-meta">
+										<h5>
+											<a href="#">Helen Thompson</a>
+										</h5>
+										<p class="small-text lusitana highlight">photographer</p>
+									</div>
+									Pork loin andouille rump, corned beef bacon kevin venison tail. Tri-tip boudin pig tenderloin ham. Meatloaf cupim picanha pork chop landjaeger pork chicken andouille jerky, shoulder flank turkey.
+								</blockquote>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="ds ms section_padding_100">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<h2 class="section_header">Team Member</h2>
+							<p class="small-text highlight lusitana">The Team of Professionals</p>
+						</div>
+					</div>
+					<div class="row topmargin_40">
+						<div class="col-sm-12">
+							<div class="owl-carousel" data-responsive-lg="3" data-margin="60" data-nav="false" data-dots="false">
+								<div class="vertical-item content-padding text-center">
+									<div class="item-media">
+										<img src="images/team/01.jpg" alt="" />
+									</div>
+									<div class="item-content">
+										<h4 class="margin_0">
+											<a href="team-single.html">Lucille Moran</a>
+										</h4>
+										<p class="small-text lusitana highlight">director</p>
+									</div>
+								</div>
+
+								<div class="vertical-item content-padding text-center">
+									<div class="item-media">
+										<img src="images/team/02.jpg" alt="" />
+									</div>
+									<div class="item-content">
+										<h4 class="margin_0">
+											<a href="team-single.html">Helen Thompson</a>
+										</h4>
+										<p class="small-text lusitana highlight">manager</p>
+									</div>
+								</div>
+
+								<div class="vertical-item content-padding text-center">
+									<div class="item-media">
+										<img src="images/team/03.jpg" alt="" />
+									</div>
+									<div class="item-content">
+										<h4 class="margin_0">
+											<a href="team-single.html">Mildred Rodriguez</a>
+										</h4>
+										<p class="small-text lusitana highlight">photographer</p>
+									</div>
+								</div>
+
+								<div class="vertical-item content-padding text-center">
+									<div class="item-media">
+										<img src="images/team/04.jpg" alt="" />
+									</div>
+									<div class="item-content">
+										<h4 class="margin_0">
+											<a href="team-single.html">Cora Tucker</a>
+										</h4>
+										<p class="small-text lusitana highlight">director</p>
+									</div>
+								</div>
+
+								<div class="vertical-item content-padding text-center">
+									<div class="item-media">
+										<img src="images/team/05.jpg" alt="" />
+									</div>
+									<div class="item-content">
+										<h4 class="margin_0">
+											<a href="team-single.html">Rosa Robinson</a>
+										</h4>
+										<p class="small-text lusitana highlight">director</p>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="contacts" class="cs background_cover page_banner section_padding_top_65 section_padding_bottom_65">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<span class="small-text main_bg_color2">24/7 support</span>
+							<p class="big playfair topmargin_10">1-800-123-4567</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<footer class="page_footer ds ms section_padding_top_75 section_padding_bottom_65 columns_padding_25">
+				<div class="container">
+					<div class="row">
+
+						<div class="col-md-4">
+							<div class="widget">
+								<h3 class="widget-title">Our Contacts</h3>
+
+								<section class="page_map bottommargin_30" data-address="Terracina, LT, Italia">
+									<!-- marker description and marker icon goes here -->
+									<div class="map_marker_description">
+										<h3>Map Title</h3>
+										<p>Map description text</p>
+										<img class="map_marker_icon" src="images/map_marker_icon_small.png" alt="">
+									</div>
+								</section>
+
+								<div class="media small-teaser">
+									<div class="media-left">
+										<i class="fa fa-globe highlight2"></i>
+									</div>
+									<div class="media-body">
+										Jacksotts str. 698 San Diego, California, USA
+									</div>
+								</div>
+
+								<div class="media small-teaser">
+									<div class="media-left">
+										<i class="fa fa-phone highlight2"></i>
+									</div>
+									<div class="media-body">
+										1-800-123-4567, 1-800-123-4568
+									</div>
+								</div>
+
+								<div class="media small-teaser">
+									<div class="media-left">
+										<i class="fa fa-envelope highlight2"></i>
+									</div>
+									<div class="media-body underlined-links greylinks">
+										<a href="mailto:your@mail.com">fashion_vogue@support.com</a>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6">
+							<div class="widget">
+								<h3 class="widget-title">Working Hours</h3>
+								<ul class="list1 no-bullets big-padding">
+									<li class="content-justify">
+										<span>Monday - Friday</span>
+										<span>9 a.m. - 6 p.m.</span>
+									</li>
+									<li class="content-justify">
+										<span>Saturday</span>
+										<span>10 a.m. - 8 p.m.</span>
+									</li>
+									<li class="content-justify">
+										<span>Sunday</span>
+										<span>Closed</span>
+									</li>
+								</ul>
+							</div>
+
+							<div class="widget widget_mailchimp">
+
+								<h3 class="widget-title">Newsletter Signup</h3>
+
+								<form class="signup form-inline" action="./" method="get">
+									<div class="form-group">
+										<input name="email" type="email" class="mailchimp_email form-control" placeholder="Email Address">
+									</div>
+									<button type="submit" class="theme_button">Send</button>
+									<div class="response"></div>
+								</form>
+
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6">
+							<div class="widget widget_banner">
+
+								<h3 class="widget-title">Banner Ad</h3>
+								<div class="vertical-item content-absolute ds">
+									<div class="item-media">
+										<img src="images/banner.jpg" alt="">
+										<div class="media-links">
+											<a href="#" class="abs-link"></a>
+										</div>
+									</div>
+									<div class="item-content">
+										<span class="main_bg_color2">
+											visit
+										</span>
+										<h3>
+											Model
+											<br> Courses
+										</h3>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="widget">
+								<h3 class="widget-title">Follow Us</h3>
+								<p class="greylinks">
+						<a class="social-icon border-icon round soc-facebook" href="#" title="Facebook"></a>
+						<a class="social-icon border-icon round soc-twitter" href="#" title="Twitter"></a>
+						<a class="social-icon border-icon round soc-google" href="#" title="Google"></a>
+						<a class="social-icon border-icon round soc-linkedin" href="#" title="LinkedIn"></a>
+						<a class="social-icon border-icon round soc-pinterest" href="#" title="Pinterest"></a>
+					</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</footer>
+
+			<section class="ls page_copyright table_section section_padding_50">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<p class="grey thin">&copy; Copyright 2017 All Rights Reserved</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+		<!-- eof #box_wrapper -->
+	</div>
+	<!-- eof #canvas -->
+
+	<script src="js/compressed.js"></script>
+	<script src="js/main.js"></script>
+
+
+	<!-- Google Map Script -->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTwYSMRGuTsmfl2z_zZDStYqMlKtrybxo"></script>
+</body>
+
+</html>
