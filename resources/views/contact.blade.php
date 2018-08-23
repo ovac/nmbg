@@ -17,14 +17,14 @@
 		</div>
 	</section>
 
-	<section class="ds page_map" data-address="Terracina, LT, Italia">
+	{{-- <section class="ds page_map" data-address="Terracina, LT, Italia">
 		<!-- marker description and marker icon goes here -->
 		<div class="map_marker_description">
 			<h3>Map Title</h3>
 			<p>Map description text</p>
 			<img class="map_marker_icon" src="images/map_marker_icon.png" alt="">
 		</div>
-	</section>
+	</section> --}}
 
 	<section class="ds columns_padding_25 section_padding_top_75 section_padding_bottom_75 columns_margin_bottom_30">
 		<div class="container">

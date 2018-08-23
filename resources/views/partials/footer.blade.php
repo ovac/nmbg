@@ -6,14 +6,14 @@
 				<div class="widget">
 					<h3 class="widget-title">Our Contacts</h3>
 
-					<section class="page_map bottommargin_30" data-address="Terracina, LT, Italia">
+					{{-- <section class="page_map bottommargin_30" data-address="Terracina, LT, Italia">
 						<!-- marker description and marker icon goes here -->
 						<div class="map_marker_description">
 							<h3>Map Title</h3>
 							<p>Map description text</p>
 							<img class="map_marker_icon" src="images/map_marker_icon_small.png" alt="">
 						</div>
-					</section>
+					</section> --}}
 
 					<div class="media small-teaser">
 						<div class="media-left">
@@ -80,7 +80,7 @@
 			</div>
 
 			<div class="col-md-4 col-sm-6">
-				<div class="widget widget_banner">
+				{{-- <div class="widget widget_banner">
 
 					<h3 class="widget-title">Banner Ad</h3>
 					<div class="vertical-item content-absolute ds">
@@ -101,7 +101,7 @@
 						</div>
 					</div>
 
-				</div>
+				</div> --}}
 
 				<div class="widget">
 					<h3 class="widget-title">Follow Us</h3>

@@ -8,11 +8,11 @@
             <a href="/about">About</a>
         </li>
         <!-- eof features -->
-        <!-- gallery -->
+        {{-- <!-- gallery -->
         <li>
             <a href="/portfolio">Portfolio</a>
         </li>
-        <!-- eof Portfolio -->
+        <!-- eof Portfolio --> --}}
         <!-- contacts -->
         <li>
             <a href="/contact">Contact</a>
