@@ -35,6 +35,8 @@ return [
         'linkedin' => 'nigeriamostbeautifulghana',
 
         'google' => 'nigeriamostbeautifulghana',
+
+        'twitter' => 'nigeriamostbeautifulghana',
     ],
 
     /*

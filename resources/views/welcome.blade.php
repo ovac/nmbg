@@ -6,7 +6,7 @@
         @section('slide-buttons')
             <div class="intro-layer inline-content" data-animation="fadeInUp">
                 <a class="theme_button color2" href="/about">About us</a>
-                <a class="theme_button inverse" href="/portfolio">Portfolio</a>
+                <a class="theme_button inverse" href="/register">Register</a>
             </div>
         @endsection
         <div class="flexslider" data-nav="false">
