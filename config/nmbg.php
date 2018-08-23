@@ -19,4 +19,39 @@ return [
      */
     'setup-bg' => 'https://img.youtube.com/vi/TlRylHBMcs4/maxresdefault.jpg',
 
+    /*
+    |--------------------------------------------------------------------------
+    | Social Links
+    |--------------------------------------------------------------------------
+     */
+    'social' => [
+
+        'instagram' => 'nigeriamostbeautifulghana',
+
+        'pinterest' => 'nigeriamostbeautifulghana',
+
+        'facebook' => 'nigeriamostbeautifulghana',
+
+        'linkedin' => 'nigeriamostbeautifulghana',
+
+        'google' => 'nigeriamostbeautifulghana',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Contact
+    |--------------------------------------------------------------------------
+     */
+    'contact' => [
+
+        'phone' => '1234567890',
+
+        'address' => 'nigeriamostbeautifulghana',
+
+        'email' => 'contact@nigeriamostbeautifulghana',
+
+        'website' => 'www.nigeriamostbeautifulghana.com',
+
+    ],
+
 ];
