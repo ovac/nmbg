@@ -23,7 +23,8 @@
 
 			<div class="row">
 
-				<form class="shop-register" role="form">
+				<form class="shop-register" method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
+                    @csrf
 
 					<div class="col-sm-6">
 						<div class="form-group validate-required" id="first_name_field">
