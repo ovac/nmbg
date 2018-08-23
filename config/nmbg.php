@@ -46,7 +46,7 @@ return [
 
         'phone' => '1234567890',
 
-        'address' => 'nigeriamostbeautifulghana',
+        'address' => 'www.nigeriamostbeautifulghana.com',
 
         'email' => 'contact@nigeriamostbeautifulghana',
 
