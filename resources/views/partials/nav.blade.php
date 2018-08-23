@@ -1,9 +1,9 @@
 <!-- main nav start -->
 <nav class="mainmenu_wrapper">
     <ul class="mainmenu nav sf-menu">
-        <li class="active">
+        {{-- <li class="active">
             <a href="/">Home</a>
-        </li>
+        </li> --}}
         <li>
             <a href="/about">About</a>
         </li>
