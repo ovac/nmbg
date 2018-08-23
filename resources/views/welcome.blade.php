@@ -13,7 +13,7 @@
             <ul class="slides">
 
                 <li>
-                    <img src="http://www.nigeriamostbeautifulghana.com/wp-content/uploads/2018/08/1H7A4314-Copy.jpg" alt="">
+                    <img src="//res.cloudinary.com/ovac/image/upload/v1535040924/1H7A4314-Copy_wfscif.jpg" alt="">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12 text-right">
@@ -45,7 +45,7 @@
                 </li>
 
                 <li>
-                    <img src="http://www.nigeriamostbeautifulghana.com/wp-content/uploads/2018/08/MG_7697.jpg" alt="">
+                    <img src="//res.cloudinary.com/ovac/image/upload/v1535041045/MG_7697_qyqpev.jpg" alt="">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12 text-right">
@@ -76,7 +76,7 @@
                 </li>
 
                 <li>
-                    <img src="https://img.youtube.com/vi/TlRylHBMcs4/maxresdefault.jpg" alt="">
+                    <img src="//img.youtube.com/vi/TlRylHBMcs4/maxresdefault.jpg" alt="">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12 text-right">
