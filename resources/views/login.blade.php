@@ -70,7 +70,7 @@
 					<!-- .with_border -->
 
 					<p class="divider_20 text-center">
-			Not registered? <a href="admin_signup.html">Create an account</a>.<br>
+			Not registered? <a href="/register">Register today.</a>.<br>
 			or go <a href="./">Home</a>
 		</p>
 
