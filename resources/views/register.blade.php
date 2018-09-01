@@ -91,7 +91,7 @@
 								<span class="required">*</span>
 							</label>
 
-							<input type="text" class="form-control " name="password" id="password" placeholder="" value="">
+							<input type="password" class="form-control " name="password" id="password" placeholder="" value="">
 
 						</div>
 
@@ -116,13 +116,13 @@
 					<div class="col-sm-6">
 
 
-						<div class="form-group" id="password2_field">
-							<label for="password2" class="control-label">
+						<div class="form-group" id="password_confirmation_field">
+							<label for="password_confirmation" class="control-label">
 								<span class="grey">Confirm Password:</span>
 								<span class="required">*</span>
 							</label>
 
-							<input type="text" class="form-control " name="password2" id="password2" placeholder="" value="">
+							<input type="password" class="form-control " name="password_confirmation" id="password_confirmation" placeholder="" value="">
 
 						</div>
 
