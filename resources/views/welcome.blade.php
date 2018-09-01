@@ -20,8 +20,8 @@
                                 <div class="slide_description_wrapper">
                                     <div class="slide_description text-center">
 
-                                        <div class="intro-layer" data-animation="fadeInUp">
-                                            <h2 class="text-uppercase big">Nigeria</h2>
+                                        <div class="intro-layer" data-animation="fadeInUp" style="margin-bottom: 0.1em;">
+                                            <h2 class="text-uppercase big" style="line-height: 10pt;" style="margin-bottom: 0.1em;">Nigeria's</h2>
                                         </div>
                                         <div class="intro-layer" data-animation="fadeInUp">
                                             <h3 class="text-uppercase">
@@ -115,7 +115,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <h2 class="section_header">Nigeria Most Beautiful Ghana 2018 Prizes</h2>
+                    <h2 class="section_header">Nigeria's Most Beautiful Ghana 2018 Prizes</h2>
                 </div>
             </div>
 
@@ -213,16 +213,16 @@
             <div class="row">
                 <div class="col-sm-12 text-center">
                     <h2 class="section_header">About</h2>
-                    <p class="small-text highlight lusitana">Nigeria Most Beautiful Ghana</p>
+                    <p class="small-text highlight lusitana">Nigeria's Most Beautiful Ghana</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
                     <p class="fontsize_20">
-                        Nigeria's Most Beautiful Ghana (NMBG) is a beauty pageant established for young Nigerian ladies between the ages of 18 and 26 schooling or residence in Ghana. This initiative aims at building role models who can serve as beauty ambassadors for Nigeria and Nigerians living in Ghana.
+                        Nigeria's's Most Beautiful Ghana (NMBG) is a beauty pageant established for young Nigeria'sn ladies between the ages of 18 and 26 schooling or residence in Ghana. This initiative aims at building role models who can serve as beauty ambassadors for Nigeria's and Nigeria'sns living in Ghana.
                     </p>
                     {{-- <p class="fontsize_20">
-                        The vision is to empower young Nigerian women to be great future leaders both at home and in the diaspora. This beauty pageant as part of its vision is to create a platform to enable contestants to display the rich Nigerian culture to Ghanaians and the rest of the world through fasion show, cultural and talent performances. ​
+                        The vision is to empower young Nigeria'sn women to be great future leaders both at home and in the diaspora. This beauty pageant as part of its vision is to create a platform to enable contestants to display the rich Nigeria'sn culture to Ghanaians and the rest of the world through fasion show, cultural and talent performances. ​
                     </p> --}}
                 </div>
                 <div class="col-sm-12 text-center">
