@@ -20,7 +20,7 @@
 							<i class="fa fa-globe highlight2"></i>
 						</div>
 						<div class="media-body">
-							{{ config('nmbg.contact.address') }}
+							<a href="http://{{ config('nmbg.contact.address') }}">{{ config('nmbg.contact.address') }}</a>
 						</div>
 					</div>
 
@@ -29,7 +29,9 @@
 							<i class="fa fa-phone highlight2"></i>
 						</div>
 						<div class="media-body">
-							{{ config('nmbg.contact.phone') }}
+							@foreach (explode(', ', config('nmbg.contact.phone')) as $phone)
+								<a href="tel:{{ $phone }}">{{ $phone }}{{ $loop->last ? '' : ', ' }}</a>
+							@endforeach
 						</div>
 					</div>
 
