@@ -4,6 +4,8 @@
 		<div class="row">
 			<div class="col-sm-12 text-center">
 				<p class="grey thin">&copy; Copyright 2018 All Rights Reserved</p>
+				<br>
+				<a href="/terms" class="gray thin">Terms & Conditions</a>
 			</div>
 		</div>
 	</div>
