@@ -50,7 +50,7 @@ return [
 
         'address' => 'www.nigeriamostbeautifulghana.com',
 
-        'email' => 'contact@nigeriamostbeautifulghana',
+        'email' => 'info@nigeriamostbeautifulghana.com',
 
         'website' => 'www.nigeriamostbeautifulghana.com',
 
