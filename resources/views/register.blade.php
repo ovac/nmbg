@@ -27,13 +27,13 @@
                     @csrf
 
 					<div class="col-sm-6">
-						<div class="form-group validate-required" id="first_name_field">
+						<div class="form-group validate-required" id="first_name_field" >
 							<label for="first_name" class="control-label">
 								<span class="grey">First Name:</span>
 								<span class="required">*</span>
 							</label>
 
-							<input type="text" class="form-control " name="first_name" id="first_name" placeholder="" value="">
+							<input type="text" class="form-control " name="first_name" id="first_name" placeholder="" value="" tabindex="1">
 						</div>
 
 						<div class="form-group validate-required validate-phone" id="phone_field">
@@ -42,19 +42,19 @@
 								<span class="required">*</span>
 							</label>
 
-							<input type="text" class="form-control " name="phone" id="phone" placeholder="" value="">
+							<input type="text" class="form-control " name="phone" id="phone" placeholder="" value="" tabindex="3">
 
 						</div>
 					</div>
 
 					<div class="col-sm-6">
-						<div class="form-group validate-required" id="last_name_field">
+						<div class="form-group validate-required" id="last_name_field" >
 							<label for="last_name" class="control-label">
 								<span class="grey">Last Name:</span>
 								<span class="required">*</span>
 							</label>
 
-							<input type="text" class="form-control " name="last_name" id="last_name" placeholder="" value="">
+							<input type="text" class="form-control " name="last_name" id="last_name" placeholder="" value="" tabindex="2">
 
 						</div>
 
@@ -64,7 +64,7 @@
 								<span class="required">*</span>
 							</label>
 
-							<input type="text" class="form-control " name="email" id="email" placeholder="" value="">
+							<input type="text" class="form-control " name="email" id="email" placeholder="" value="" tabindex="4">
 
 						</div>
 
@@ -72,12 +72,12 @@
 
 					<div class="col-sm-12">
 						<div class="form-group address-field validate-required" id="address_fields">
-							<label for="address_1" class="control-label">
+							<label for="address" class="control-label">
 								<span class="grey">Address:</span>
 								<span class="required">*</span>
 							</label>
 
-							<input type="text" class="form-control " name="address_1" id="address_1" placeholder="" value="">
+							<input type="text" class="form-control " name="address" id="address" placeholder="" value="" tabindex="5">
 
 						</div>
 
@@ -91,7 +91,7 @@
 								<span class="required">*</span>
 							</label>
 
-							<input type="password" class="form-control " name="password" id="password" placeholder="" value="">
+							<input type="password" class="form-control " name="password" id="password" placeholder="" value="" tabindex="6">
 
 						</div>
 
@@ -122,7 +122,7 @@
 								<span class="required">*</span>
 							</label>
 
-							<input type="password" class="form-control " name="password_confirmation" id="password_confirmation" placeholder="" value="">
+							<input type="password" class="form-control " name="password_confirmation" id="password_confirmation" placeholder="" value="" tabindex="7">
 
 						</div>
 
