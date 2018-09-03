@@ -40,4 +40,9 @@ class profile extends Model
         'name_of_institution',
         'local_government_area',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

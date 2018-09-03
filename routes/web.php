@@ -12,7 +12,6 @@
  */
 
 Route::view('/', 'welcome');
-Route::view('pay', 'pay');
 Route::view('about', 'about');
 Route::view('setup', 'setup');
 Route::view('contact', 'contact');
@@ -20,3 +19,8 @@ Route::view('register', 'register');
 Route::view('portfolio', 'portfolio');
 
 Auth::routes();
+
+Route::group(['middleware' => ['auth', 'setup-profile']], function () {
+    Route::view('pay', 'pay');
+    Route::view('home', 'home');
+});

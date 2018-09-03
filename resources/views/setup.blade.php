@@ -30,7 +30,7 @@
 
                     	<div class="col-sm-10 col-sm-offset-1">
                         	<div class="form-group label-floating is-empty">
-                        		<label class="control-label">Name Of Institution</label>
+                        		<label class="control-label">Name Of Institution (School Name)</label>
                     			<input type="text" required class="form-control" name="name_of_institution" value="{{ old('name_of_institution') }}">
                         		<span class="material-input"></span>
                         	</div>

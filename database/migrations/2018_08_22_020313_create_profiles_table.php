@@ -42,6 +42,7 @@ class CreateProfilesTable extends Migration
             $table->string('local_government_area');
             $table->string('statistics')->nullable();
 
+            $table->integer('user_id');
             $table->increments('id');
             $table->timestamps();
         });
