@@ -31,3 +31,8 @@ Route::group(['middleware' => ['auth', 'setup-profile']], function () {
     Route::resource('profile', 'ProfileController');
     Route::post('profile/edit', 'ProfileController@update');
 });
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
