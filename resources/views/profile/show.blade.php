@@ -26,15 +26,17 @@
 							<div class="with_border with_padding">
 								<div class="media big-left-media">
 									<div class="media-left">
-										<img src="images/team_square/01.jpg" alt="...">
+										<img src="{{ auth()->user()->profile->avatar }}" alt="...">
 									</div>
 									<div class="media-body">
-										<h4>Ann Andersen
-											<small>Admin</small>
+										<h4>
+											{{ auth()->user()->name }}
+											<br>
+											<small>ID: {{ auth()->user()->id }}</small>
 										</h4>
 										<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-							</p>
+											{{ auth()->user()->profile->about }}
+										</p>
 									</div>
 								</div>
 							</div>
@@ -66,7 +68,7 @@
 												<strong class="grey">
 													Location:
 												</strong>
-												Australia
+												{{ auth()->user()->profile->address }}
 											</div>
 										</div>
 									</li>
@@ -79,9 +81,9 @@
 											</div>
 											<div class="media-body media-middle">
 												<strong class="grey">
-													Company:
+													Sponsor:
 												</strong>
-												Awesome Company
+												{{ auth()->user()->profile->sponsor }}
 											</div>
 										</div>
 									</li>
@@ -96,7 +98,7 @@
 												<strong class="grey">
 													Position:
 												</strong>
-												CEO
+													{{ 'N/A' }}
 											</div>
 										</div>
 									</li>
@@ -318,7 +320,7 @@
 						<div class="col-sm-12">
 							<div class="panel-group bottommargin_0" id="contact-info-accordion">
 
-								<div class="panel panel-default">
+								{{-- <div class="panel panel-default">
 									<div class="panel-heading">
 										<h4 class="panel-title">
 											<a class="icon-tab" data-toggle="collapse" data-parent="#contact-info-accordion" href="#user-info-collapse1">
@@ -334,7 +336,7 @@
 								</p>
 										</div>
 									</div>
-								</div>
+								</div> --}}
 								<!-- .panel -->
 
 								<div class="panel panel-default">
@@ -349,8 +351,8 @@
 									<div id="user-info-collapse2" class="panel-collapse collapse">
 										<div class="panel-body">
 											<p>
-									<strong>1-100-255-552-12</strong> (07:00-17:00 EST Mon-Fri)
-								</p>
+												<strong>{{ auth()->user()->profile->phone }}</strong>
+											</p>
 										</div>
 									</div>
 								</div>
@@ -369,7 +371,7 @@
 										<div class="panel-body">
 
 											<p class="greylinks">
-									<a href="mailto:your@mail.com">your@mail.com</a>
+									<a href="mailto:{{ auth()->user()->email }}">{{ auth()->user()->email }}</a>
 								</p>
 										</div>
 									</div>
@@ -389,9 +391,8 @@
 										<div class="panel-body">
 
 											<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								</p>
-
+												{{ auth()->user()->address }}
+											</p>
 										</div>
 									</div>
 								</div>
@@ -408,12 +409,16 @@
 									</div>
 									<div id="user-info-collapse5" class="panel-collapse collapse">
 										<div class="panel-body">
-
-											<p>
-									<a href="#" class="social-icon soc-facebook"></a>
-									<a href="#" class="social-icon soc-twitter"></a>
-									<a href="#" class="social-icon soc-google"></a>
-								</p>
+											@if (auth()->user()->social)
+												<p>
+													<a href="https://www.facebook.com/{{ auth()->user()->social->facebook or '' }}" class="social-icon soc-facebook"></a>
+													<a href="https://www.twitter.com/{{ auth()->user()->social->twitter or '' }}" class="social-icon soc-twitter"></a>
+													<a href="https://www.google.com/+{{ auth()->user()->social->google or '' }}" class="social-icon soc-google"></a>
+													<a href="https://www.linkedin.com/{{ auth()->user()->social->linkedin or '' }}" class="social-icon soc-linkedin"></a>
+													<a href="https://www.instagram.com/{{ auth()->user()->social->instagram or '' }}" class="social-icon soc-instagram"></a>
+													<a href="https://www.instagram.com/{{ auth()->user()->social->instagram or '' }}" class="social-icon soc-instagram"></a>
+												</p>
+											@endif
 
 										</div>
 									</div>

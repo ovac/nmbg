@@ -2,7 +2,6 @@
 
 namespace App;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class User extends \TCG\Voyager\Models\User
@@ -19,6 +18,7 @@ class User extends \TCG\Voyager\Models\User
         'last_name',
         'address',
         'email',
+        'phone',
         'password',
     ];
 
@@ -39,5 +39,10 @@ class User extends \TCG\Voyager\Models\User
     public function profile()
     {
         return $this->hasOne(Profile::class);
+    }
+
+    public function social()
+    {
+        return $this->hasOne(Social::class);
     }
 }
