@@ -26,7 +26,7 @@
 							<a href="#">
 								<div class="media">
 									<div class="media-left media-middle">
-										<img src="/images/team_square/01.jpg" alt="">
+										<img src="{{ auth()->user()->profile->avatar }}" alt="">
 									</div>
 									<div class="media-body media-middle">
 										<h4>{{ auth()->user()->name }}</h4>

@@ -27,10 +27,12 @@ class Profile extends Model
         'height',
         'width',
         'hobby',
+        'avatar',
         'weight',
         'hair_color',
 
         // Personal
+        'programme',
         'statistics',
         'role_model',
         'place_of_birth',

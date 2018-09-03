@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateProfile;
-use App\Profile;
 use Illuminate\Http\Request;
+use JD\Cloudder\Facades\Cloudder;
 
 class SetupController extends Controller
 {
@@ -36,7 +36,13 @@ class SetupController extends Controller
      */
     public function store(CreateProfile $request)
     {
-        $request->user()->profile()->create($request->all());
+        $avatar = Cloudder::upload($request->file('avatar'))->getResult()['secure_url'];
+
+        $request->user()->profile()->create(
+            array_replace($request->all(), [
+                'avatar' => $avatar,
+            ])
+        );
 
         return redirect('/home');
     }
