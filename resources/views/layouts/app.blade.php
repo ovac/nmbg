@@ -47,6 +47,7 @@
     <!--[if lt IE 9]>
         <div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
     <![endif]-->
+    @include('partials.errors', compact('errors'))
 
     <div class="preloader">
         <div class="preloader_image"></div>
@@ -122,6 +123,8 @@
 
     <!-- Google Map Script -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTwYSMRGuTsmfl2z_zZDStYqMlKtrybxo"></script>
+
+    @yield('show-error-modal')
 </body>
 
 </html>
