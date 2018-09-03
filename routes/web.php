@@ -19,6 +19,7 @@ Route::view('contact', 'contact')->name('contact');
 Route::view('portfolio', 'portfolio')->name('portfolio');
 // Route::view('register', 'register')->name('register');
 Route::view('dashboard', 'interior.dashboard')->name('dashboard');
+Route::resource('models', 'ModelController');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('setup', 'SetupController');
@@ -26,12 +27,21 @@ Route::group(['middleware' => ['auth']], function () {
 
 Route::group(['middleware' => ['auth', 'setup-profile']], function () {
     Route::view('pay', 'pay');
+    Route::view('calender', 'interior.calender');
+    Route::resource('portfolio', 'PersonalPictureController');
+    Route::resource('nmbg-portfolio', 'NMBGPictureController');
     Route::view('home', 'interior.dashboard');
     Route::view('profile/edit', 'profile.edit');
     Route::resource('profile', 'ProfileController');
+    Route::resource('orders', 'TicketOrderController');
+    Route::resource('faq', 'FaqController');
+    Route::view('comments', 'interior.comments');
     Route::post('profile/edit', 'ProfileController@update');
+    Route::get('logout', function () {
+        Auth::logout();
+        return redirect('/');
+    });
 });
-
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

@@ -28,17 +28,17 @@
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/main.css" class="color-switcher-link">
-    <link rel="stylesheet" href="css/shop.css" class="color-switcher-link">
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/main.css" class="color-switcher-link">
+    <link rel="stylesheet" href="/css/shop.css" class="color-switcher-link">
+    <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
 
     <!--[if lt IE 9]>
-        <script src="js/vendor/html5shiv.min.js"></script>
-        <script src="js/vendor/respond.min.js"></script>
-        <script src="js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="/js/vendor/html5shiv.min.js"></script>
+        <script src="/js/vendor/respond.min.js"></script>
+        <script src="/js/vendor/jquery-1.12.4.min.js"></script>
     <![endif]-->
 
 </head>
@@ -117,8 +117,8 @@
     </div>
     <!-- eof #canvas -->
 
-    <script src="js/compressed.js"></script>
-    <script src="js/main.js"></script>
+    <script src="/js/compressed.js"></script>
+    <script src="/js/main.js"></script>
 
 
     <!-- Google Map Script -->

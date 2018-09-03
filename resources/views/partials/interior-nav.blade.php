@@ -3,11 +3,13 @@
 	<!-- template sections -->
 
 	<header class="page_header_side page_header_side_sticked active-slide-side-header ds">
-		<div class="side_header_logo ds ms">
-			<a href="./admin_index.html">
-				<span class="logo_text playfair">
+		<div class="side_header_logo ds ms" style="background: white;">
+			<a href="/dashboard">
+	                <img src="{{ config('nmbg.logo') }}" height="100px">
+				{{-- <span class="logo_text playfair">
+
 					<p style="font-size: 6pt;" class="text-left">{{ config('app.name') }}</p>
-				</span>
+				</span> --}}
 			</a>
 		</div>
 		<span class="toggle_menu_side toggler_light header-slide">
@@ -70,7 +72,7 @@
 					<h3 class="dark_bg_color">Dashboard</h3>
 					<ul class="menu-click">
 						<li>
-							<a href="admin_index.html">
+							<a href="/dashboard">
 								<i class="fa fa-th-large"></i>
 								Dashboard
 							</a>
@@ -86,144 +88,52 @@
 							</li>
 						</ul>
 					</ul>
-					{{-- <h3 class="dark_bg_color">Pages</h3>
+					<h3 class="dark_bg_color">Pages</h3>
 					<ul class="menu-click">
 						<li>
+							<a href="/calender">
+								<i class="fa fa-calendar-o"></i>
+								Calender
+							</a>
+						</li>
+						<li>
 							<a href="#">
-								<i class="fa fa-user"></i>
-								Account
-							</a>
-							<ul>
-								<li>
-									<a href="admin_profile.html">
-					Profile
-				</a>
-								</li>
-								<li>
-									<a href="admin_profile_edit.html">
-					Edit Profile
-				</a>
-								</li>
-								<li>
-									<a href="admin_inbox.html">
-					Inbox
-				</a>
-								</li>
-								<li>
-									<a href="admin_signin.html">
-					Sign In
-				</a>
-								</li>
-								<li>
-									<a href="admin_signup.html">
-					Sign Up
-				</a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a href="admin_posts.html">
 								<i class="fa fa-file-text"></i>
-								Posts
+								Portfolio
 							</a>
 							<ul>
 								<li>
-									<a href="admin_posts.html">
-					Posts
-				</a>
+									<a href="/portfolio">
+										Personal
+									</a>
 								</li>
 								<li>
-									<a href="admin_post.html">
-					Single Post
-				</a>
+									<a href="/nmbg-portfolio">
+										NMBG
+									</a>
 								</li>
 
 							</ul>
 						</li>
 						<li>
-							<a href="admin_products.html">
-								<i class="fa fa-suitcase"></i>
-								Products
-							</a>
-							<ul>
-								<li>
-									<a href="admin_products.html">
-					Products
-				</a>
-								</li>
-								<li>
-									<a href="admin_product.html">
-					Single Product
-				</a>
-								</li>
-
-							</ul>
-						</li>
-						<li>
-							<a href="admin_orders.html">
+							<a href="/orders">
 								<i class="fa fa-shopping-cart"></i>
-								Orders
+								Ticket Orders
 							</a>
-							<ul>
-								<li>
-									<a href="admin_orders.html">
-					Orders
-				</a>
-								</li>
-								<li>
-									<a href="admin_order.html">
-					Single Order
-				</a>
-								</li>
-							</ul>
 						</li>
 						<li>
-							<a href="admin_comments.html">
-								<i class="fa fa-comment"></i>
+							<a href="/comments">
+								<i class="fa fa-comments"></i>
 								Comments
 							</a>
-							<ul>
-								<li>
-									<a href="admin_comments.html">
-					Comments
-				</a>
-								</li>
-								<li>
-									<a href="admin_comment.html">
-					Single Comment
-				</a>
-								</li>
-							</ul>
 						</li>
 						<li>
-							<a href="admin_faq.html">
+							<a href="/faq">
 								<i class="fa fa-support"></i>
 								FAQ
 							</a>
 						</li>
 					</ul>
-
-					<h3 class="dark_bg_color">UI Elements</h3>
-					<ul class="menu-click">
-						<li>
-							<a href="admin_tables.html">
-								<i class="fa fa-table"></i>
-								Tables
-							</a>
-						</li>
-						<li>
-							<a href="admin_forms.html">
-								<i class="fa fa-check-square-o"></i>
-								Forms
-							</a>
-						</li>
-						<li>
-							<a href="admin_bootstrap.html">
-								<i class="fa fa-cog"></i>
-								Bootstrap
-							</a>
-						</li>
-					</ul> --}}
 				</nav>
 				<!-- eof main side nav -->
 
@@ -516,7 +426,6 @@
 				</li>
 
 				 {{-- Uncomment following to show user menu --}}
- --}}
 			<li class="dropdown user-dropdown-menu">
 				<a class="header-button" id="user-dropdown-menu" data-target="#" href="./" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
 					<i class="fa fa-user grey"></i> <span class="header-button-text">User</span>
@@ -524,25 +433,19 @@
 				<div class="dropdown-menu ls">
 					<ul class="nav darklinks">
 						<li>
-							<a href="admin_profile.html">
+							<a href="/profile">
 								<i class="fa fa-user"></i>
 								Profile
 							</a>
 						</li>
 						<li>
-							<a href="admin_profile_edit.html">
+							<a href="/profile/edit">
 								<i class="fa fa-edit"></i>
 								Edit Profile
 							</a>
 						</li>
 						<li>
-							<a href="admin_inbox.html">
-								<i class="fa fa-envelope-o"></i>
-								Inbox
-							</a>
-						</li>
-						<li>
-							<a href="admin_signin.html">
+							<a href="/logout">
 								<i class="fa fa-sign-out"></i>
 								Log Out
 							</a>

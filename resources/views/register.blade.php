@@ -71,6 +71,19 @@
 					</div>
 
 					<div class="col-sm-12">
+						<div class="form-group username-field validate-required" id="username_fields">
+							<label for="username" class="control-label">
+								<span class="grey">Username:</span>
+								<span class="required">*</span>
+							</label>
+
+							<input type="text" class="form-control " name="username" id="username" placeholder="" value="" tabindex="5">
+
+						</div>
+
+					</div>
+
+					<div class="col-sm-12">
 						<div class="form-group address-field validate-required" id="address_fields">
 							<label for="address" class="control-label">
 								<span class="grey">Address:</span>
