@@ -11,16 +11,23 @@
 |
  */
 
-Route::view('/', 'welcome');
-Route::view('about', 'about');
-Route::view('setup', 'setup');
-Route::view('contact', 'contact');
-Route::view('register', 'register');
-Route::view('portfolio', 'portfolio');
-
 Auth::routes();
+
+Route::view('/', 'welcome')->name('welcome');
+Route::view('about', 'about')->name('about');
+Route::view('contact', 'contact')->name('contact');
+Route::view('portfolio', 'portfolio')->name('portfolio');
+// Route::view('register', 'register')->name('register');
+Route::view('dashboard', 'interior.dashboard')->name('dashboard');
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::resource('setup', 'SetupController');
+});
 
 Route::group(['middleware' => ['auth', 'setup-profile']], function () {
     Route::view('pay', 'pay');
-    Route::view('home', 'home');
+    Route::view('home', 'interior.dashboard');
+    Route::view('profile/edit', 'profile.edit');
+    Route::resource('profile', 'ProfileController');
+    Route::post('profile/edit', 'ProfileController@update');
 });

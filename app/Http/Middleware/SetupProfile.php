@@ -19,6 +19,6 @@ class SetupProfile
             return $next($request);
         }
 
-        return redirect('/setup');
+        return redirect('/setup/create');
     }
 }

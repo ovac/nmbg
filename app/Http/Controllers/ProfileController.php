@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\profile;
+use App\Profile;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
@@ -14,7 +14,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        //
+        return view('profile.show');
     }
 
     /**
@@ -44,7 +44,7 @@ class ProfileController extends Controller
      * @param  \App\profile  $profile
      * @return \Illuminate\Http\Response
      */
-    public function show(profile $profile)
+    public function show(Profile $profile)
     {
         //
     }
@@ -55,9 +55,9 @@ class ProfileController extends Controller
      * @param  \App\profile  $profile
      * @return \Illuminate\Http\Response
      */
-    public function edit(profile $profile)
+    public function edit()
     {
-        //
+        return view('profile.edit');
     }
 
     /**
@@ -78,7 +78,7 @@ class ProfileController extends Controller
      * @param  \App\profile  $profile
      * @return \Illuminate\Http\Response
      */
-    public function destroy(profile $profile)
+    public function destroy(Profile $profile)
     {
         //
     }

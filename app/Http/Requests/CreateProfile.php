@@ -24,7 +24,7 @@ class CreateProfile extends FormRequest
     public function rules()
     {
         return [
-            'guardian_sponcor_name' => 'required|string',
+            // 'guardian_sponcor_name' => 'required|string',
             'guardian_occupation' => 'required|string',
             'guardian_full_name' => 'required|string',
             'guardian_address' => 'required|string',
@@ -33,8 +33,9 @@ class CreateProfile extends FormRequest
             // Appearance
             'eye_color' => 'required|string',
             'height' => 'required|string',
-            'width' => 'required|string',
+            // 'width' => 'required|string',
             'hobby' => 'required|string',
+            'avatar' => 'required|image',
             'weight' => 'required|string',
             'hair_color' => 'required|string',
             // Personal

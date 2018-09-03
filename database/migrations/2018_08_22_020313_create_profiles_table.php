@@ -17,7 +17,7 @@ class CreateProfilesTable extends Migration
 
             // Guardian // Information
             $table->string('guardian_email')->nullable();
-            $table->string('guardian_sponcor_name');
+            $table->string('guardian_sponcor_name')->nullable();
             $table->string('guardian_occupation');
             $table->string('guardian_full_name');
             $table->string('guardian_address');
@@ -26,7 +26,7 @@ class CreateProfilesTable extends Migration
             // Appearance
             $table->string('eye_color');
             $table->string('height');
-            $table->string('width');
+            $table->string('width')->nullable();
             $table->string('hobby');
             $table->string('weight');
             $table->string('hair_color');
@@ -41,6 +41,7 @@ class CreateProfilesTable extends Migration
             $table->string('name_of_institution');
             $table->string('local_government_area');
             $table->string('statistics')->nullable();
+            $table->string('avatar');
 
             $table->integer('user_id');
             $table->increments('id');

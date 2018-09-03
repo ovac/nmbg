@@ -2,7 +2,7 @@
 
 @section('setup-steps')
 	<div class="card wizard-card" data-color="purple" id="wizard">
-        <form action="{{-- {{ route('setup.store') }} --}}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('setup.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
         <!--        You can switch " data-color="rose" "  with one of the next bright colors: "blue", "green", "orange", "purple"        -->
 
@@ -63,7 +63,7 @@
                         <div class="col-sm-5">
                             <div class="form-group label-floating is-empty">
                                 <label class="control-label">Local Govt Area</label>
-                                <input type="text" required class="form-control" name="local_govt_area" value="{{ old('local_govt_area') }}">
+                                <input type="text" required class="form-control" name="local_government_area" value="{{ old('local_government_area') }}">
                             </div>
                         </div>
 
@@ -88,8 +88,8 @@
                         </div>
                         <div class="col-sm-5">
                             <div class="form-group label-floating is-empty">
-                                <label class="control-label">Favourite Artiste</label>
-                                <input type="text" required class="form-control" name="favourite_artiste" value="{{ old('favourite_artiste') }}">
+                                <label class="control-label">Favourite Color</label>
+                                <input type="text" required class="form-control" name="favourite_color" value="{{ old('favourite_color') }}">
                             </div>
                         </div>
 
@@ -156,7 +156,7 @@
                         <div class="col-sm-5">
                             <div class="form-group label-floating is-empty">
                                 <label class="control-label">Phone Number</label>
-                                <input type="text" required class="form-control" name="guardian_phone_number" value="{{ old('guardian_phone_number') }}">
+                                <input type="text" required class="form-control" name="guardian_phone" value="{{ old('guardian_phone') }}">
                             </div>
                         </div>
 
