@@ -7,6 +7,9 @@
         <li>
             <a href="/about">About</a>
         </li>
+        <li>
+            <a href="/terms">Terms</a>
+        </li>
         <!-- eof features -->
         {{-- <!-- gallery -->
         <li>
@@ -21,6 +24,9 @@
         <li>
             <a href="/login">Login</a>
         </li>
+        {{-- <li>
+            <a href="/models">Contestants</a>
+        </li> --}}
         <!-- register -->
         <li>
             <a href="/register">2018 Register</a>

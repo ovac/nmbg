@@ -13,13 +13,14 @@
 						</h4>
 						<hr class="bottommargin_30">
 						<div class="wrap-forms">
-							<form>
+							<form action="{{ route('login') }}" method="POST">
+								@csrf
 								<div class="row">
 									<div class="col-sm-12">
 										<div class="form-group has-placeholder">
 											<label for="login-email">Email address</label>
 											<i class="grey fa fa-envelope-o"></i>
-											<input type="email" class="form-control" id="login-email" placeholder="Email Address">
+											<input type="email" class="form-control" id="login-email" name="email" placeholder="Email Address">
 										</div>
 
 									</div>
@@ -29,7 +30,7 @@
 										<div class="form-group has-placeholder">
 											<label for="login-password">Password</label>
 											<i class="grey fa fa-pencil-square-o"></i>
-											<input type="password" class="form-control" id="login-password" placeholder="Password">
+											<input type="password" class="form-control" id="login-password" name="password" placeholder="Password">
 										</div>
 									</div>
 								</div>
