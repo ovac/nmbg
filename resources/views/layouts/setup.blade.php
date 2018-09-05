@@ -33,6 +33,7 @@
 			display: block;
 			margin: 0px auto;
 		}
+
 		.logo-container .logo {
 			width: 300px;
 			max-width: 300px;
@@ -40,9 +41,11 @@
 			border-radius: 0px;
 			border: none;
 		}
+
 		.image-container {
 			height: 100vh;
 		}
+
 		.picture-src {
 			height: 100%;
 		}
@@ -58,7 +61,6 @@
 			border-radius: 2px;
 		}
 
-		picture-container
 	</style>
 </head>
 

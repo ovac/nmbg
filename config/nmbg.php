@@ -46,7 +46,7 @@ return [
      */
     'contact' => [
 
-        'phone' => '+233(0)247014649, +233(0) 23 050 5957',
+        'phone' => '+233 (0) 24 701 4649, +233 (0) 23 050 5957',
 
         'address' => 'www.nigeriamostbeautifulghana.com',
 

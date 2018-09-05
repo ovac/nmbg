@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col-sm-12 text-center">
                     <h2 class="section_header">About Us</h2>
-                    <p class="small-text highlight lusitana">Nigeria Most Beautiful Ghana</p>
+                    <p class="small-text highlight lusitana">Nigeria's Most Beautiful Ghana</p>
                 </div>
             </div>
             <div class="row">
@@ -42,7 +42,7 @@
             <div class="row">
                 <div class="col-sm-12 text-center">
                     <h2 class="section_header">Our Vision</h2>
-                    <p class="small-text highlight lusitana">Nigeria Most Beautiful Ghana</p>
+                    <p class="small-text highlight lusitana">Nigeria's Most Beautiful Ghana</p>
                 </div>
             </div>
             <div class="row">
