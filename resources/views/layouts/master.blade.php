@@ -43,6 +43,8 @@
 
 <body class="admin">
 
+    @include('partials.errors', compact('errors'))
+
     <!--[if lt IE 9]>
         <div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
     <![endif]-->
@@ -139,6 +141,7 @@
 
     <!-- dashboard init -->
     <script src="/js/admin.js"></script>
+    @yield('show-error-modal')
 </body>
 
 </html>

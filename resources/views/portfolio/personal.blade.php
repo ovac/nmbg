@@ -56,7 +56,7 @@
 										<td>
 											<div class="media">
 												<div class="media-left media-middle">
-													<img src="images/shop/01.jpg" alt="...">
+													<img src="{{ str_replace('upload', 'upload/h_40', $picture->picture) }}" alt="...">
 												</div>
 												<div class="media-body media-middle">
 													<h5>
@@ -72,7 +72,7 @@
 											{{ $picture->categories }}
 										</td>
 										<td class="media-middle">
-											{{ $picture->published ? 'Published' : 'Unpublished' }}
+											{{ $picture->published ? 'Published' : 'Pending Review' }}
 										</td>
 									</tr>
 								@endforeach

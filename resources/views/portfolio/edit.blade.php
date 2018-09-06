@@ -18,7 +18,9 @@
 			<!-- .row -->
 
 
-			<form class="form-horizontal">
+			<form class="form-horizontal" method="POST" action="/portfolio/{{ $picture->id }}">
+				@csrf
+				@method('put')
 
 				<div class="row">
 					<div class="col-md-8">
@@ -27,7 +29,7 @@
 
 
 								<div class="item-media">
-									<img src="/images/gallery/01.jpg" alt="...">
+									<img src="{{ str_replace('upload', 'upload', $picture->picture) }}" alt="...">
 								</div>
 
 								<div class="item-edit-controls darklinks">
@@ -40,41 +42,39 @@
 								</div>
 							</div>
 						</div>
-						<!-- .with_border -->
 						<div class="with_border with_padding">
 
 
 							<div class="row form-group">
 								<label class="col-lg-3 control-label">Picture title: </label>
 								<div class="col-lg-9">
-									<input type="text" class="form-control">
+									<input type="text" class="form-control" name="title" value="{{ old('title') ?: $picture->title }}">
 								</div>
 							</div>
 							<div class="row form-group">
 								<label class="col-lg-3 control-label">Picture slug: </label>
 								<div class="col-lg-9">
-									<input type="text" class="form-control">
+									<input type="text" class="form-control" name="slug" value="{{ old('slug') ?: $picture->slug }}">
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<label class="col-lg-3 control-label">Short description: </label>
 								<div class="col-lg-9">
-									<textarea rows="3" class="form-control"></textarea>
+									<textarea rows="3" class="form-control"  name="short_description">{{ old('short_description') ?: $picture->short_description }}</textarea>
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<label class="col-lg-3 control-label">Picture description: </label>
 								<div class="col-lg-9">
-									<textarea rows="8" class="form-control"></textarea>
+									<textarea rows="8" class="form-control"  name="description">{{ old('description') ?: $picture->description }}</textarea>
 								</div>
 							</div>
 
 							<div class="row">
 								<div class="col-sm-12 text-right">
 									<button type="submit" class="theme_button wide_button">Save Picture</button>
-									<a href="admin_Pictures.html" class="theme_button inverse wide_button">Cancel</a>
 								</div>
 							</div>
 							<!-- .row  -->
@@ -99,14 +99,14 @@
 							<div class="row form-group">
 								<label class="col-lg-3 control-label">Categories: </label>
 								<div class="col-lg-9">
-									<input type="text" class="form-control">
+									<input type="text" class="form-control"  name="categories" value="{{ old('categories') ?: $picture->categories }}">
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<label class="col-lg-3 control-label">Picture Tags: </label>
 								<div class="col-lg-9">
-									<input type="text" class="form-control">
+									<input type="text" class="form-control"  name="tags" value="{{ old('tags') ?: $picture->tags }}">
 								</div>
 							</div>
 
@@ -119,8 +119,6 @@
 
 				</div>
 				<!-- .row  -->
-
-
 			</form>
 
 		</div>

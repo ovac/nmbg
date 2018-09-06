@@ -3,7 +3,8 @@
 @section('content')
 
 	<section class="ls section_padding_top_50 section_padding_bottom_50 columns_padding_10">
-		<form class="form-horizontal" action="/portfolio" method="POST">
+		<form class="form-horizontal" action="/portfolio" method="POST" enctype="multipart/form-data">
+			@csrf
 			<div class="container-fluid">
 
 				<div class="row">
@@ -24,9 +25,7 @@
 					<div class="col-md-8">
 						<div class="with_border with_padding">
 							<div class="item-editable bottommargin_20">
-
-
-								<input type="file"  name="picture" value="{{ old('picture') }}">
+								<input type="file" name="picture" class="form-control">
 							</div>
 						</div>
 						<!-- .with_border -->
@@ -49,21 +48,20 @@
 							<div class="row form-group">
 								<label class="col-lg-3 control-label">Short description: </label>
 								<div class="col-lg-9">
-									<textarea rows="3" class="form-control"  name="short_description" value="{{ old('short_description') }}"></textarea>
+									<textarea rows="3" class="form-control"  name="short_description">{{ old('short_description') }}</textarea>
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<label class="col-lg-3 control-label">Picture description: </label>
 								<div class="col-lg-9">
-									<textarea rows="8" class="form-control"  name="description" value="{{ old('description') }}"></textarea>
+									<textarea rows="8" class="form-control"  name="description">{{ old('description') }}</textarea>
 								</div>
 							</div>
 
 							<div class="row">
 								<div class="col-sm-12 text-right">
 									<button type="submit" class="theme_button wide_button">Save Picture</button>
-									<a href="admin_Pictures.html" class="theme_button inverse wide_button">Cancel</a>
 								</div>
 							</div>
 							<!-- .row  -->

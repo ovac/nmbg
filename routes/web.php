@@ -31,7 +31,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 Route::group(['middleware' => ['auth', 'setup-profile']], function () {
     Route::view('pay', 'pay');
-    Route::view('dashboard', 'interior.dashboard')->name('dashboard');
+    Route::get('dashboard', 'DashboardController@dashboard')->name('dashboard');
     Route::view('calender', 'interior.calender');
     Route::resource('portfolio', 'PersonalPictureController');
     Route::resource('nmbg-portfolio', 'NMBGPictureController');

@@ -104,190 +104,65 @@
 					<!-- .row -->
 
 					<div class="row">
+
 						<div class="col-xs-12 col-md-6">
 
 							<div class="with_border with_padding">
 								<h4>
-									Latest Comments
+									Your NMBG Photoshoots
 								</h4>
 								<div class="admin-scroll-panel scrollbar-macosx">
 									<ul class="list1 no-bullets">
-										<li class="item-editable">
-											<div class="media">
-												<div class="item-edit-controls darklinks">
-													<a href="#">
-														<i class="fa fa-share-square-o"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-edit"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-trash-o"></i>
-													</a>
-												</div>
-												<div class="media-left">
-													<img src="images/team_square/01.jpg" alt="...">
-												</div>
-												<div class="media-body">
-													<h5>
-														Alex Walker
-														<small>2 hours ago</small>
-													</h5>
-													<div>
-														Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, corporis. Voluptatibus odio perspiciatis non quisquam provident, quasi eaque officia.
+										{{-- @foreach (auth()->user()->orders as $order)
+											<li class="item-editable small-teaser">
+												<div class="media">
+													<div class="item-edit-controls darklinks">
+														<a href="#">
+															<i class="fa fa-share-square-o"></i>
+														</a>
+														<a href="#">
+															<i class="fa fa-edit"></i>
+														</a>
+														<a href="#">
+															<i class="fa fa-trash-o"></i>
+														</a>
+													</div>
+													<div class="media-left">
+														<div class="teaser_icon label-success fontsize_16">
+															<i class="fa fa-shopping-cart"></i>
+														</div>
+													</div>
+													<div class="media-body">
+														<h5>
+															Total
+															<small>GHC{{ $order->price }}</small>
+														</h5>
+														@if ($order->comment)
+															<div>
+																<h6>Order Comment:</h6>
+																{{ $order->comment }}
+															</div>
+														@endif
 													</div>
 												</div>
-											</div>
-										</li>
-										<li class="item-editable">
-											<div class="media">
-												<div class="item-edit-controls darklinks">
-													<a href="#">
-														<i class="fa fa-share-square-o"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-edit"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-trash-o"></i>
-													</a>
-												</div>
-												<div class="media-left">
-													<img src="images/team_square/02.jpg" alt="...">
-												</div>
-												<div class="media-body">
-													<h5>
-														Janet C. Donnalds
-														<small>5 hours ago</small>
-													</h5>
-													<div>
-														Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero itaque dolor laboriosam dolores magnam mollitia, voluptatibus inventore accusamus illo.
-													</div>
-												</div>
-											</div>
-										</li>
-										<li class="item-editable">
-											<div class="media">
-												<div class="item-edit-controls darklinks">
-													<a href="#">
-														<i class="fa fa-share-square-o"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-edit"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-trash-o"></i>
-													</a>
-												</div>
-												<div class="media-left">
-													<img src="images/team_square/03.jpg" alt="...">
-												</div>
-												<div class="media-body">
-													<h5>
-														Victoria Grow
-														<small>1 day ago</small>
-													</h5>
-													<div>
-														Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, esse, magni aliquam quisquam modi delectus veritatis est ut culpa minus repellendus.
-													</div>
-												</div>
-											</div>
-										</li>
-										<li class="item-editable">
-											<div class="media">
-												<div class="item-edit-controls darklinks">
-													<a href="#">
-														<i class="fa fa-share-square-o"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-edit"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-trash-o"></i>
-													</a>
-												</div>
-												<div class="media-left">
-													<img src="images/team_square/01.jpg" alt="...">
-												</div>
-												<div class="media-body">
-													<h5>
-														Alex Walker
-														<small>2 hours ago</small>
-													</h5>
-													<div>
-														Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, corporis. Voluptatibus odio perspiciatis non quisquam provident, quasi eaque officia.
-													</div>
-												</div>
-											</div>
-										</li>
-										<li class="item-editable">
-											<div class="media">
-												<div class="item-edit-controls darklinks">
-													<a href="#">
-														<i class="fa fa-share-square-o"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-edit"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-trash-o"></i>
-													</a>
-												</div>
-												<div class="media-left">
-													<img src="images/team_square/02.jpg" alt="...">
-												</div>
-												<div class="media-body">
-													<h5>
-														Janet C. Donnalds
-														<small>5 hours ago</small>
-													</h5>
-													<div>
-														Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero itaque dolor laboriosam dolores magnam mollitia, voluptatibus inventore accusamus illo.
-													</div>
-												</div>
-											</div>
-										</li>
-										<li class="item-editable">
-											<div class="media">
-												<div class="item-edit-controls darklinks">
-													<a href="#">
-														<i class="fa fa-share-square-o"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-edit"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-trash-o"></i>
-													</a>
-												</div>
-												<div class="media-left">
-													<img src="images/team_square/03.jpg" alt="...">
-												</div>
-												<div class="media-body">
-													<h5>
-														Victoria Grow
-														<small>1 day ago</small>
-													</h5>
-													<div>
-														Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, esse, magni aliquam quisquam modi delectus veritatis est ut culpa minus repellendus.
-													</div>
-												</div>
-											</div>
-										</li>
+											</li>
+										@endforeach --}}
 									</ul>
 								</div>
 								<!-- .admin-scroll-panel -->
 								<div class="text-right greylinks panel-view-all">
-									<a href="/comments">View All</a>
+									<a href="/orders">View All</a>
 								</div>
 							</div>
 							<!-- .with_border -->
 						</div>
+						<!-- .col-* -->
+
 						<div class="col-xs-12 col-md-6">
 
 							<div class="with_border with_padding">
 								<h4>
-									Latest Orders
+									Latest Ticket Orders
 								</h4>
 								<div class="admin-scroll-panel scrollbar-macosx">
 									<ul class="list1 no-bullets">
@@ -335,6 +210,25 @@
 							<!-- .with_border -->
 						</div>
 						<!-- .col-* -->
+
+						<div class="col-xs-12">
+							<div class="row with_border with_padding">
+								<h4>
+									Nigeria's Most Beautiful Ghana: Instagram Feed
+								</h4>
+								<div class="admin-scroll-panel scrollbar-macosx">
+
+									@foreach ($pictures as $picture)
+										<div class="col-sm-3">
+											<a href="{{ $picture->link }}" target="_blank">
+												<img src="{{ $picture->images->low_resolution->url }}">
+											</a>
+										</div>
+									@endforeach
+								</div>
+							</div>
+
+						</div>
 
 					</div>
 					<!-- .row -->

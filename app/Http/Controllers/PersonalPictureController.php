@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UpdatePicture;
+use App\Http\Requests\UploadPicture;
 use App\PersonalPicture;
 use Illuminate\Http\Request;
+use JD\Cloudder\Facades\Cloudder;
 
 class PersonalPictureController extends Controller
 {
@@ -36,9 +39,19 @@ class PersonalPictureController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UploadPicture $request)
     {
-        //
+
+        $picture = Cloudder::upload($request->file('picture'))->getResult()['secure_url'];
+
+        $request->user()->personalPictures()->create(
+            array_replace($request->all(), [
+                'picture' => $picture,
+                'slug' => str_slug($request->input('slug') ?: $request->input('title'), "-"),
+            ])
+        );
+
+        return redirect('/portfolio');
     }
 
     /**
@@ -58,9 +71,9 @@ class PersonalPictureController extends Controller
      * @param  \App\PersonalPicture  $personalPicture
      * @return \Illuminate\Http\Response
      */
-    public function edit(PersonalPicture $personalPicture)
+    public function edit($id)
     {
-        return view('portfolio.edit');
+        return view('portfolio.edit', ['picture' => PersonalPicture::findOrFail($id)]);
     }
 
     /**
@@ -70,9 +83,17 @@ class PersonalPictureController extends Controller
      * @param  \App\PersonalPicture  $personalPicture
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, PersonalPicture $personalPicture)
+    public function update(UpdatePicture $request, $id)
     {
-        //
+        $picture = PersonalPicture::findOrFail($id);
+
+        $picture->update(
+            array_replace($request->except('picture'), [
+                'slug' => str_slug($request->input('slug') ?: $request->input('title'), "-"),
+            ])
+        );
+
+        return back();
     }
 
     /**

@@ -13,7 +13,10 @@
         "jrm2k6/cloudder": "^0.6.0",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
-        "tcg/voyager": "^1.1"
+        "php-http/guzzle6-adapter": "^1.1",
+        "php-http/message": "^1.7",
+        "tcg/voyager": "^1.1",
+        "vinkla/instagram": "^9.0"
     },
     "require-dev": {
         "filp/whoops": "^2.0",
