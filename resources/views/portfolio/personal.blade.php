@@ -47,32 +47,35 @@
 									<th>Categories:</th>
 									<th>Status:</th>
 								</tr>
-								<tr class="item-editable">
-									<td class="media-middle text-center">
-										<input type="checkbox">
-									</td>
-									<td>
-										<div class="media">
-											<div class="media-left media-middle">
-												<img src="images/shop/01.jpg" alt="...">
+
+								@foreach ($pictures as $picture)
+									<tr class="item-editable">
+										<td class="media-middle text-center">
+											<input type="checkbox">
+										</td>
+										<td>
+											<div class="media">
+												<div class="media-left media-middle">
+													<img src="images/shop/01.jpg" alt="...">
+												</div>
+												<div class="media-body media-middle">
+													<h5>
+														<a href="portfolio/1/edit">{{ $picture->title }}</a>
+													</h5>
+												</div>
 											</div>
-											<div class="media-body media-middle">
-												<h5>
-													<a href="portfolio/1/edit">Consectetur adipisicing elit</a>
-												</h5>
-											</div>
-										</div>
-									</td>
-									<td class="media-middle">
-										<time datetime="2017-02-08T20:25:23+00:00" class="entry-date">08.02.2017 at 20:25</time>
-									</td>
-									<td class="media-middle">
-										uncategorized, category1
-									</td>
-									<td class="media-middle">
-										Published
-									</td>
-								</tr>
+										</td>
+										<td class="media-middle">
+											<time datetime="{{ $picture->created_at }}" class="entry-date">{{ $picture->created_at }}</time>
+										</td>
+										<td class="media-middle">
+											{{ $picture->categories }}
+										</td>
+										<td class="media-middle">
+											{{ $picture->published ? 'Published' : 'Unpublished' }}
+										</td>
+									</tr>
+								@endforeach
 
 
 							</table>

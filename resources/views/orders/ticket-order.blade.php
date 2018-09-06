@@ -25,87 +25,32 @@
 										<th>Quantity:</th>
 										<th>Total:</th>
 									</tr>
-									<tr class="item-editable">
+									@foreach ($orders as $order)
+										{{-- expr --}}
+										<tr class="item-editable">
 
-										<td>
-											<div class="media">
-												<div class="media-body media-middle">
-													<h5>
-														<a href="#">Consectetur adipisicing elit</a>
-													</h5>
+											<td>
+												<div class="media">
+													<div class="media-body media-middle">
+														<h5>
+															<a href="#">{{ $order->ticket->name }}</a>
+														</h5>
+													</div>
 												</div>
-											</div>
-										</td>
-										<td class="media-middle">
-											<strong>
-												GHC55.00
-											</strong>
-										</td>
-										<td class="media-middle">
-											2
-										</td>
-										<td class="media-middle">
-											GHC110.00
-										</td>
-									</tr>
-
-									<tr class="item-editable">
-
-										<td>
-											<div class="media">
-
-												<div class="media-body media-middle">
-													<h5>
-														<a href="#">Lullamco laboris nisi</a>
-													</h5>
-												</div>
-											</div>
-										</td>
-										<td class="media-middle">
-											<strong>
-												GHC185.00
-											</strong>
-										</td>
-										<td class="media-middle">
-											1
-										</td>
-										<td class="media-middle">
-											GHC185.00
-										</td>
-									</tr>
-
-									<tr class="item-editable">
-
-										<td>
-											<div class="media">
-
-												<div class="media-body media-middle">
-													<h5>
-														<a href="#">Sunt in culpa qui</a>
-													</h5>
-												</div>
-											</div>
-										</td>
-										<td class="media-middle">
-											<strong>
-												GHC95.00
-											</strong>
-										</td>
-										<td class="media-middle">
-											3
-										</td>
-										<td class="media-middle">
-											GHC285.00
-										</td>
-									</tr>
-									<tr>
-										<td colspan="3">
-											<strong>Total:</strong>
-										</td>
-										<td>
-											<strong>GHC580.00</strong>
-										</td>
-									</tr>
+											</td>
+											<td class="media-middle">
+												<strong>
+													GHC{{ $order->ticket->price }}
+												</strong>
+											</td>
+											<td class="media-middle">
+												{{ $order->quantity }}
+											</td>
+											<td class="media-middle">
+												GHC{{ $order->total }}
+											</td>
+										</tr>
+									@endforeach
 
 								</table>
 							</div>
@@ -115,9 +60,7 @@
 							<div class="row form-group">
 								<label class="col-lg-3 control-label">Order comment: </label>
 								<div class="col-lg-9">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+									<p>{{ $order->comment }}</p>
 								</div>
 							</div>
 
@@ -150,37 +93,7 @@
 										<strong class="grey">
 											Order date:
 										</strong>
-										<time datetime="2017-02-08T20:25:23+00:00" class="entry-date">08.02.2017 at 20:25</time>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="media small-teaser">
-									<div class="media-left media-middle">
-										<div class="teaser_icon label-info fontsize_16 round">
-											<i class="fa fa-globe"></i>
-										</div>
-									</div>
-									<div class="media-body media-middle">
-										<strong class="grey">
-											Shipping Method
-										</strong>
-										Consectetur adipisicing elit.
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="media small-teaser">
-									<div class="media-left media-middle">
-										<div class="teaser_icon label-warning fontsize_16 round">
-											<i class="fa fa-map-marker"></i>
-										</div>
-									</div>
-									<div class="media-body media-middle">
-										<strong class="grey">
-											Delivery Address:
-										</strong>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+										<time datetime="2017-02-08T20:25:23+00:00" class="entry-date">{{ $order->created_at }}</time>
 									</div>
 								</div>
 							</li>
@@ -195,7 +108,7 @@
 										<strong class="grey">
 											Order Total:
 										</strong>
-										GHC580
+										GHC{{ $order->total }}
 									</div>
 								</div>
 							</li>
@@ -222,15 +135,15 @@
 									</div>
 									<div class="media-body media-middle">
 										<h5 class="bottommargin_0">
-											<a href="admin_profile.html">Alex Walker</a>
+											<a href="admin_profile.html">{{ $order->client->name }}</a>
 										</h5>
-										&lt;email@example.com&gt;
-										<p>0553577261</p>
+										&lt;{{ $order->client->name }}&gt;
+										<p>{{ $order->client->phone }}</p>
 
 									</div>
 								</div>
 							</li>
-							<li>
+							{{-- <li>
 								<div class="media small-teaser">
 									<div class="media-left media-middle">
 										<div class="teaser_icon label-success fontsize_16">
@@ -244,7 +157,7 @@
 										0
 									</div>
 								</div>
-							</li>
+							</li> --}}
 							<li>
 								<div class="media small-teaser">
 									<div class="media-left media-middle">
@@ -256,7 +169,7 @@
 										<strong class="grey">
 											Orders:
 										</strong>
-										12
+										{{ $order->client->orders->count() }}
 									</div>
 								</div>
 							</li>

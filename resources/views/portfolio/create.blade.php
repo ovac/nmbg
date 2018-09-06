@@ -3,22 +3,22 @@
 @section('content')
 
 	<section class="ls section_padding_top_50 section_padding_bottom_50 columns_padding_10">
-		<div class="container-fluid">
+		<form class="form-horizontal" action="/portfolio" method="POST">
+			<div class="container-fluid">
 
-			<div class="row">
-				<div class="col-sm-12">
-					<h3>Add Picture
-						{{-- <small class="pull-right">
-							<a href="admin_comments.html">
-								<i class="fa fa-comments"></i> Picture</a>
-						</small> --}}
-					</h3>
+				<div class="row">
+					<div class="col-sm-12">
+						<h3>Add Picture
+							{{-- <small class="pull-right">
+								<a href="admin_comments.html">
+									<i class="fa fa-comments"></i> Picture</a>
+							</small> --}}
+						</h3>
+					</div>
 				</div>
-			</div>
-			<!-- .row -->
+				<!-- .row -->
 
 
-			<form class="form-horizontal">
 
 				<div class="row">
 					<div class="col-md-8">
@@ -26,7 +26,7 @@
 							<div class="item-editable bottommargin_20">
 
 
-								<input type="file" name="">
+								<input type="file"  name="picture" value="{{ old('picture') }}">
 							</div>
 						</div>
 						<!-- .with_border -->
@@ -36,27 +36,27 @@
 							<div class="row form-group">
 								<label class="col-lg-3 control-label">Picture title: </label>
 								<div class="col-lg-9">
-									<input type="text" class="form-control">
+									<input type="text" class="form-control" name="title" value="{{ old('title') }}">
 								</div>
 							</div>
 							<div class="row form-group">
 								<label class="col-lg-3 control-label">Picture slug: </label>
 								<div class="col-lg-9">
-									<input type="text" class="form-control">
+									<input type="text" class="form-control" name="slug" value="{{ old('slug') }}">
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<label class="col-lg-3 control-label">Short description: </label>
 								<div class="col-lg-9">
-									<textarea rows="3" class="form-control"></textarea>
+									<textarea rows="3" class="form-control"  name="short_description" value="{{ old('short_description') }}"></textarea>
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<label class="col-lg-3 control-label">Picture description: </label>
 								<div class="col-lg-9">
-									<textarea rows="8" class="form-control"></textarea>
+									<textarea rows="8" class="form-control"  name="description" value="{{ old('description') }}"></textarea>
 								</div>
 							</div>
 
@@ -88,14 +88,14 @@
 							<div class="row form-group">
 								<label class="col-lg-3 control-label">Categories: </label>
 								<div class="col-lg-9">
-									<input type="text" class="form-control">
+									<input type="text" class="form-control"  name="categories" value="{{ old('categories') }}">
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<label class="col-lg-3 control-label">Picture Tags: </label>
 								<div class="col-lg-9">
-									<input type="text" class="form-control">
+									<input type="text" class="form-control"  name="tags" value="{{ old('tags') }}">
 								</div>
 							</div>
 
@@ -110,9 +110,9 @@
 				<!-- .row  -->
 
 
-			</form>
 
-		</div>
-		<!-- .container -->
+			</div>
+			<!-- .container -->
+		</form>
 	</section>
 @endsection

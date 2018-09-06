@@ -46,4 +46,14 @@ class User extends \TCG\Voyager\Models\User
     {
         return $this->hasOne(Social::class);
     }
+
+    public function orders()
+    {
+        return $this->hasMany(TicketOrder::class);
+    }
+
+    public function personalPictures()
+    {
+        return $this->hasMany(PersonalPicture::class);
+    }
 }

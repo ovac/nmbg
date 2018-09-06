@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\TicketOrder;
+use App\Ticket;
 use Illuminate\Http\Request;
 
-class TicketOrderController extends Controller
+class TicketController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class TicketOrderController extends Controller
      */
     public function index()
     {
-        $orders = auth()->user()->orders;
-        return view('orders.ticket-orders', compact('orders'));
+        //
     }
 
     /**
@@ -42,21 +41,21 @@ class TicketOrderController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\TicketOrder  $ticketOrder
+     * @param  \App\Ticket  $ticket
      * @return \Illuminate\Http\Response
      */
-    public function show(TicketOrder $ticketOrder)
+    public function show(Ticket $ticket)
     {
-        return view('orders.ticket-order');
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\TicketOrder  $ticketOrder
+     * @param  \App\Ticket  $ticket
      * @return \Illuminate\Http\Response
      */
-    public function edit(TicketOrder $ticketOrder)
+    public function edit(Ticket $ticket)
     {
         //
     }
@@ -65,10 +64,10 @@ class TicketOrderController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\TicketOrder  $ticketOrder
+     * @param  \App\Ticket  $ticket
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TicketOrder $ticketOrder)
+    public function update(Request $request, Ticket $ticket)
     {
         //
     }
@@ -76,10 +75,10 @@ class TicketOrderController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\TicketOrder  $ticketOrder
+     * @param  \App\Ticket  $ticket
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TicketOrder $ticketOrder)
+    public function destroy(Ticket $ticket)
     {
         //
     }

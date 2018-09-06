@@ -291,178 +291,40 @@
 								</h4>
 								<div class="admin-scroll-panel scrollbar-macosx">
 									<ul class="list1 no-bullets">
-										<li class="item-editable small-teaser">
-											<div class="media">
-												<div class="item-edit-controls darklinks">
-													<a href="#">
-														<i class="fa fa-share-square-o"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-edit"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-trash-o"></i>
-													</a>
-												</div>
-												<div class="media-left">
-													<div class="teaser_icon label-success fontsize_16">
-														<i class="fa fa-shopping-cart"></i>
+										@foreach (auth()->user()->orders as $order)
+											<li class="item-editable small-teaser">
+												<div class="media">
+													<div class="item-edit-controls darklinks">
+														<a href="#">
+															<i class="fa fa-share-square-o"></i>
+														</a>
+														<a href="#">
+															<i class="fa fa-edit"></i>
+														</a>
+														<a href="#">
+															<i class="fa fa-trash-o"></i>
+														</a>
+													</div>
+													<div class="media-left">
+														<div class="teaser_icon label-success fontsize_16">
+															<i class="fa fa-shopping-cart"></i>
+														</div>
+													</div>
+													<div class="media-body">
+														<h5>
+															Product Name
+															<small>GHC{{ $order->price }}</small>
+														</h5>
+														@if ($order->comment)
+															<div>
+																<h6>Order Comment:</h6>
+																{{ $order->comment }}
+															</div>
+														@endif
 													</div>
 												</div>
-												<div class="media-body">
-													<h5>
-														Product Name
-														<small>GHC365.00</small>
-													</h5>
-													<div>
-														<h6>Order Comment:</h6>
-														Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, corporis. Voluptatibus odio perspiciatis non quisquam provident, quasi eaque officia.
-													</div>
-												</div>
-											</div>
-										</li>
-										<li class="item-editable small-teaser">
-											<div class="media">
-												<div class="item-edit-controls darklinks">
-													<a href="#">
-														<i class="fa fa-share-square-o"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-edit"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-trash-o"></i>
-													</a>
-												</div>
-												<div class="media-left">
-													<div class="teaser_icon label-success fontsize_16">
-														<i class="fa fa-shopping-cart"></i>
-													</div>
-												</div>
-												<div class="media-body">
-													<h5>
-														6 Products
-														<small>GHC129.00</small>
-													</h5>
-												</div>
-											</div>
-										</li>
-										<li class="item-editable small-teaser">
-											<div class="media">
-												<div class="item-edit-controls darklinks">
-													<a href="#">
-														<i class="fa fa-share-square-o"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-edit"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-trash-o"></i>
-													</a>
-												</div>
-												<div class="media-left">
-													<div class="teaser_icon label-success fontsize_16">
-														<i class="fa fa-shopping-cart"></i>
-													</div>
-												</div>
-												<div class="media-body">
-													<h5>
-														Product Name Secont
-														<small>GHC199.00</small>
-													</h5>
-													<div>
-														<h6>Order Comment:</h6>
-														Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, esse, magni aliquam quisquam modi delectus veritatis est ut culpa minus repellendus.
-													</div>
-												</div>
-											</div>
-										</li>
-										<li class="item-editable small-teaser">
-											<div class="media">
-												<div class="item-edit-controls darklinks">
-													<a href="#">
-														<i class="fa fa-share-square-o"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-edit"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-trash-o"></i>
-													</a>
-												</div>
-												<div class="media-left">
-													<div class="teaser_icon label-success fontsize_16">
-														<i class="fa fa-shopping-cart"></i>
-													</div>
-												</div>
-												<div class="media-body">
-													<h5>
-														Product Name
-														<small>GHC365.00</small>
-													</h5>
-													<div>
-														<h6>Order Comment:</h6>
-														Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, corporis. Voluptatibus odio perspiciatis non quisquam provident, quasi eaque officia.
-													</div>
-												</div>
-											</div>
-										</li>
-										<li class="item-editable small-teaser">
-											<div class="media">
-												<div class="item-edit-controls darklinks">
-													<a href="#">
-														<i class="fa fa-share-square-o"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-edit"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-trash-o"></i>
-													</a>
-												</div>
-												<div class="media-left">
-													<div class="teaser_icon label-success fontsize_16">
-														<i class="fa fa-shopping-cart"></i>
-													</div>
-												</div>
-												<div class="media-body">
-													<h5>
-														6 Products
-														<small>GHC129.00</small>
-													</h5>
-												</div>
-											</div>
-										</li>
-										<li class="item-editable small-teaser">
-											<div class="media">
-												<div class="item-edit-controls darklinks">
-													<a href="#">
-														<i class="fa fa-share-square-o"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-edit"></i>
-													</a>
-													<a href="#">
-														<i class="fa fa-trash-o"></i>
-													</a>
-												</div>
-												<div class="media-left">
-													<div class="teaser_icon label-success fontsize_16">
-														<i class="fa fa-shopping-cart"></i>
-													</div>
-												</div>
-												<div class="media-body">
-													<h5>
-														Product Name Secont
-														<small>GHC199.00</small>
-													</h5>
-													<div>
-														<h6>Order Comment:</h6>
-														Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, esse, magni aliquam quisquam modi delectus veritatis est ut culpa minus repellendus.
-													</div>
-												</div>
-											</div>
-										</li>
+											</li>
+										@endforeach
 									</ul>
 								</div>
 								<!-- .admin-scroll-panel -->

@@ -83,39 +83,41 @@
 									<th>Total:</th>
 									<th>Status:</th>
 								</tr>
-								<tr class="item-editable">
-									<td class="media-middle text-center">
-										<input type="checkbox">
-									</td>
-									<td class="media-middle">
-										<a href="/orders/1">
-											#0001
-										</a>
-									</td>
-									<td>
-										<div class="media">
-											<div class="media-left">
-												<img src="images/team_square/01.jpg" alt="...">
+								@foreach ($orders as $order)
+									<tr class="item-editable">
+										<td class="media-middle text-center">
+											<input type="checkbox">
+										</td>
+										<td class="media-middle">
+											<a href="/orders/1">
+												#0001
+											</a>
+										</td>
+										<td>
+											<div class="media">
+												<div class="media-left">
+													<img src="images/team_square/01.jpg" alt="...">
+												</div>
+												<div class="media-body">
+													<h5>
+														<a href="#">{{ $order->client->name }}</a>
+													</h5>
+													&lt;{{ $order->client->email }}&gt;
+												</div>
 											</div>
-											<div class="media-body">
-												<h5>
-													<a href="#">Alex Walker</a>
-												</h5>
-												&lt;email@example.com&gt;
-											</div>
-										</div>
-									</td>
-									<td class="media-middle">
-										<time datetime="2017-02-08T20:25:23+00:00" class="entry-date">08.02.2017 at 20:25</time>
-									</td>
-									<td class="media-middle">
-										GHC315.00
-									</td>
+										</td>
+										<td class="media-middle">
+											<time datetime="{{ $order->created_at }}" class="entry-date">{{ $order->created_at }}</time>
+										</td>
+										<td class="media-middle">
+											GHC{{ $order->total }}
+										</td>
 
-									<td class="media-middle">
-										Delivered
-									</td>
-								</tr>
+										<td class="media-middle">
+											Delivered
+										</td>
+									</tr>
+								@endforeach
 							</table>
 						</div>
 						<!-- .table-responsive -->
@@ -125,7 +127,7 @@
 				<!-- .col-* -->
 			</div>
 			<!-- .row -->
-			<div class="row">
+			{{-- <div class="row">
 				<div class="col-sm-12">
 					<div class="row">
 						<div class="col-md-6">
@@ -145,7 +147,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> --}}
 			<!-- .row main columns -->
 		</div>
 		<!-- .container -->

@@ -14,7 +14,9 @@ class PersonalPictureController extends Controller
      */
     public function index()
     {
-        return view('portfolio.personal');
+        $pictures = auth()->user()->personalPictures;
+
+        return view('portfolio.personal', compact('pictures'));
     }
 
     /**

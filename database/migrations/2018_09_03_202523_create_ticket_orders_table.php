@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateTicketOrdersTable extends Migration
 {
@@ -15,6 +15,12 @@ class CreateTicketOrdersTable extends Migration
     {
         Schema::create('ticket_orders', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('client_id');
+            $table->integer('ticket_id');
+            $table->integer('user_id')->nullable();
+            $table->longText('comment')->nullable();
+            $table->string('token');
+            $table->json('data');
             $table->timestamps();
         });
     }

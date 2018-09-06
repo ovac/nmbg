@@ -31,12 +31,12 @@
 
 							<div class="col-sm-6">
 								<div class="form-group validate-required" id="first_name_field" >
-									<label for="first_name" class="control-label">
+									<label for="first_name" class="control-label"  value="{{ old('first_name') }}">
 										<span class="grey">First Name:</span>
 										<span class="required">*</span>
 									</label>
 
-									<input type="text" class="form-control " name="first_name" id="first_name" placeholder="" value="" tabindex="1">
+									<input type="text" class="form-control " name="first_name" id="first_name" placeholder=""  value="{{ old('title') }}"tabindex="1">
 								</div>
 							</div>
 
@@ -47,7 +47,7 @@
 										<span class="required">*</span>
 									</label>
 
-									<input type="text" class="form-control " name="last_name" id="last_name" placeholder="" value="" tabindex="2">
+									<input type="text" class="form-control " name="last_name" id="last_name" placeholder=""  value="{{ old('last_name') }}"tabindex="2">
 
 								</div>
 
@@ -60,7 +60,7 @@
 										<span class="required">*</span>
 									</label>
 
-									<input type="text" class="form-control " name="username" id="username" placeholder="" value="" tabindex="3">
+									<input type="text" class="form-control " name="username" id="username" placeholder=""  value="{{ old('username') }}"tabindex="3">
 
 								</div>
 
@@ -73,7 +73,7 @@
 										<span class="required">*</span>
 									</label>
 
-									<input type="text" class="form-control " name="phone" id="phone" placeholder="" value="" tabindex="3">
+									<input type="text" class="form-control " name="phone" id="phone" placeholder=""  value="{{ old('phone') }}"tabindex="3">
 
 								</div>
 							</div>
@@ -86,7 +86,7 @@
 										<span class="required">*</span>
 									</label>
 
-									<input type="text" class="form-control " name="email" id="email" placeholder="" value="" tabindex="4">
+									<input type="text" class="form-control " name="email" id="email" placeholder=""  value="{{ old('email') }}"tabindex="4">
 
 								</div>
 							</div>
@@ -98,7 +98,7 @@
 										<span class="required">*</span>
 									</label>
 
-									<input type="text" class="form-control " name="address" id="address" placeholder="" value="" tabindex="5">
+									<input type="text" class="form-control " name="address" id="address" placeholder=""  value="{{ old('address') }}"tabindex="5">
 
 								</div>
 
@@ -112,7 +112,7 @@
 										<span class="required">*</span>
 									</label>
 
-									<input type="password" class="form-control " name="password" id="password" placeholder="" value="" tabindex="6">
+									<input type="password" class="form-control " name="password" id="password" placeholder="" tabindex="6">
 
 								</div>
 
@@ -143,7 +143,7 @@
 										<span class="required">*</span>
 									</label>
 
-									<input type="password" class="form-control " name="password_confirmation" id="password_confirmation" placeholder="" value="" tabindex="7">
+									<input type="password" class="form-control " name="password_confirmation" id="password_confirmation" placeholder="" tabindex="7">
 
 								</div>
 
