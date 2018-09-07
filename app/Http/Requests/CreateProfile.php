@@ -39,6 +39,7 @@ class CreateProfile extends FormRequest
             'weight' => 'required|string',
             'hair_color' => 'required|string',
             // Personal
+            'level' => 'required|string',
             'programme' => 'required|string',
             'role_model' => 'required|string',
             'place_of_birth' => 'required|string',

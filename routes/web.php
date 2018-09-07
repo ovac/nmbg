@@ -36,7 +36,7 @@ Route::group(['middleware' => ['auth', 'setup-profile']], function () {
     Route::resource('portfolio', 'PersonalPictureController');
     Route::resource('nmbg-portfolio', 'NMBGPictureController');
     Route::view('home', 'interior.dashboard');
-    Route::view('profile/edit', 'profile.edit');
+    Route::get('profile/edit', 'ProfileController@edit');
     Route::resource('profile', 'ProfileController');
     Route::resource('orders', 'TicketOrderController');
     Route::resource('faq', 'FaqController');

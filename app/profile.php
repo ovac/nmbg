@@ -32,6 +32,7 @@ class Profile extends Model
         'hair_color',
 
         // Personal
+        'level',
         'programme',
         'statistics',
         'role_model',

@@ -411,12 +411,12 @@
 										<div class="panel-body">
 											@if (auth()->user()->social)
 												<p>
-													<a href="https://www.facebook.com/{{ auth()->user()->social->facebook or '' }}" class="social-icon soc-facebook"></a>
-													<a href="https://www.twitter.com/{{ auth()->user()->social->twitter or '' }}" class="social-icon soc-twitter"></a>
-													<a href="https://www.google.com/+{{ auth()->user()->social->google or '' }}" class="social-icon soc-google"></a>
-													<a href="https://www.linkedin.com/{{ auth()->user()->social->linkedin or '' }}" class="social-icon soc-linkedin"></a>
-													<a href="https://www.instagram.com/{{ auth()->user()->social->instagram or '' }}" class="social-icon soc-instagram"></a>
-													<a href="https://www.instagram.com/{{ auth()->user()->social->instagram or '' }}" class="social-icon soc-instagram"></a>
+													<a href="https://www.facebook.com/{{ auth()->user()->social->facebook ?: '' }}" class="social-icon soc-facebook"></a>
+													<a href="https://www.twitter.com/{{ auth()->user()->social->twitter ?: '' }}" class="social-icon soc-twitter"></a>
+													<a href="https://www.google.com/+{{ auth()->user()->social->google ?: '' }}" class="social-icon soc-google"></a>
+													<a href="https://www.linkedin.com/{{ auth()->user()->social->linkedin ?: '' }}" class="social-icon soc-linkedin"></a>
+													<a href="https://www.instagram.com/{{ auth()->user()->social->instagram ?: '' }}" class="social-icon soc-instagram"></a>
+													<a href="https://www.instagram.com/{{ auth()->user()->social->instagram ?: '' }}" class="social-icon soc-instagram"></a>
 												</p>
 											@endif
 

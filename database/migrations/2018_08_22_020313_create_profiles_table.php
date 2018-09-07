@@ -41,6 +41,7 @@ class CreateProfilesTable extends Migration
             $table->string('name_of_institution');
             $table->string('local_government_area');
             $table->string('statistics')->nullable();
+            $table->string('level');
             $table->string('avatar');
 
             $table->integer('user_id');

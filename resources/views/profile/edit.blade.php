@@ -17,8 +17,6 @@
 
 			<div class="row">
 				<div class="col-xs-12">
-
-					<form class="form-horizontal">
 						<div class="row flex-row">
 							<div class="col-md-6">
 
@@ -28,43 +26,50 @@
 
 									<hr>
 
-									<div class="row form-group">
-										<label class="col-lg-3 control-label" for="user-profile-avatar">Select Avatar</label>
-										<div class="col-lg-9">
-											<input type="file" id="user-profile-avatar">
-											<p class="help-block">Select your 200x200px avatar</p>
+									<form method="POST" action="/profile/update">
+										@csrf
+										@method('PUT')
+										<input type="hidden" name="update_profile">
 
-										</div>
-									</div>
+										<div class="row form-group">
+											<label class="col-lg-3 control-label" for="user-profile-avatar">Select Avatar</label>
+											<div class="col-lg-9">
+												<input type="file" name="avatar" id="user-profile-avatar" class="form-control">
+												<p class="help-block">Select your avatar</p>
 
+											</div>
+										</div>
 
-									<div class="row form-group">
-										<label class="col-lg-3 control-label">Country:</label>
-										<div class="col-lg-9">
-											<select class="form-control">
-												<option selected="">Select Country</option>
-												<option>USA</option>
-												<option>United Kingdom</option>
-												<option>Australia</option>
-												<option>Germany</option>
-												<option>France</option>
-												<option>Other</option>
-											</select>
+										<div class="row form-group">
+											<label class="col-lg-3 control-label">School/Institution:</label>
+											<div class="col-lg-9">
+												<input type="text" name="name_of_institution" value="{{ old('name_of_institution') ?: $profile->name_of_institution }}" class="form-control">
+											</div>
 										</div>
-									</div>
-									<div class="row form-group">
-										<label class="col-lg-3 control-label">Company name:</label>
-										<div class="col-lg-9">
-											<input type="text" class="form-control">
-										</div>
-									</div>
-									<div class="row form-group">
-										<label class="col-lg-3 control-label">Position:</label>
-										<div class="col-lg-9">
-											<input type="text" class="form-control">
-										</div>
-									</div>
 
+										<div class="row form-group">
+											<label class="col-lg-3 control-label">Programme:</label>
+											<div class="col-lg-9">
+												<input type="text" name="programme" value="{{ old('programme') ?: $profile->programme }}" class="form-control">
+											</div>
+										</div>
+
+										<div class="row form-group">
+											<label class="col-lg-3 control-label">Level:</label>
+											<div class="col-lg-9">
+												<input type="text" name="level" value="{{ old('level') ?: $profile->level }}" class="form-control">
+											</div>
+										</div>
+
+										<div class="row">
+
+											<label class="col-lg-3 control-label"></label>
+											<div class="col-lg-9">
+												<button type="submit" class="theme_button wide_button">Save</button>
+											</div>
+										</div>
+										<!-- .row -->
+									</form>
 								</div>
 								<!-- .with_border -->
 
@@ -74,37 +79,77 @@
 							<div class="col-md-6">
 								<div class="with_border with_padding">
 
-									<h4>Contact info</h4>
+									<h4>Account info</h4>
 
 									<hr>
+										<form method="POST" action="/profile/update">
+											@csrf
+											@method('PUT')
+											<input type="hidden" name="update_account">
 
+											<div class="row form-group validate-required" id="first_name_field" >
+												<label class="col-lg-3 control-label" for="first_name">
+													<span class="grey">First Name:</span>
+													<span class="required">*</span>
+												</label>
 
-									<div class="row form-group">
-										<label class="col-lg-3 control-label">Work number:</label>
-										<div class="col-lg-9">
-											<input type="tel" class="form-control">
-										</div>
-									</div>
-									<div class="row form-group">
-										<label class="col-lg-3 control-label">Mobile number:</label>
-										<div class="col-lg-9">
-											<input type="tel" class="form-control">
-										</div>
-									</div>
-									<div class="row form-group">
-										<label class="col-lg-3 control-label">E-mail address:</label>
-										<div class="col-lg-9">
-											<input type="email" class="form-control">
-										</div>
-									</div>
-									<div class="row form-group">
-										<label class="col-lg-3 control-label">Work address:</label>
-										<div class="col-lg-9">
-											<textarea rows="2" class="form-control"></textarea>
-										</div>
-									</div>
+												<div class="col-lg-9">
+													<input type="text" class="form-control " name="first_name" id="first_name" placeholder=""  value="{{ old('first_name') ?: $user->first_name}}"tabindex="1">
+												</div>
+											</div>
 
+											<div class="row form-group validate-required" id="last_name_field" >
+												<label class="col-lg-3 control-label" for="last_name">
+													<span class="grey">Last Name:</span>
+													<span class="required">*</span>
+												</label>
 
+												<div class="col-lg-9">
+													<input type="text" class="form-control " name="last_name" id="last_name" placeholder=""  value="{{ old('last_name') ?: $user->last_name }}"tabindex="2">
+												</div>
+											</div>
+
+											<div class="row form-group validate-required validate-phone" id="phone_field">
+												<label class="col-lg-3 control-label" for="phone">
+													<span class="grey">Phone:</span>
+													<span class="required">*</span>
+												</label>
+
+												<div class="col-lg-9">
+													<input type="text" class="form-control " name="phone" id="phone" placeholder=""  value="{{ old('phone') ?: $user->phone }}"tabindex="3">
+												</div>
+											</div>
+
+											<div class="row form-group validate-required validate-email" id="email_field">
+												<label class="col-lg-3 control-label" for="email">
+													<span class="grey">Email Address:</span>
+													<span class="required">*</span>
+												</label>
+												<div class="col-lg-9">
+													<input type="text" class="form-control " name="email" id="email" placeholder=""  value="{{ old('email') ?: $user->email }}"tabindex="4">
+												</div>
+											</div>
+
+											<div class="row form-group address-field validate-required" id="address_fields">
+												<label class="col-lg-3 control-label" for="address">
+													<span class="grey">Address:</span>
+													<span class="required">*</span>
+												</label>
+
+												<div class="col-lg-9">
+													<input type="text" class="form-control " name="address" id="address" placeholder=""  value="{{ old('address') ?: $user->address }}"tabindex="5">
+												</div>
+											</div>
+
+											<div class="row">
+
+												<label class="col-lg-3 control-label"></label>
+												<div class="col-lg-9">
+													<button type="submit" class="theme_button wide_button">Save</button>
+												</div>
+											</div>
+											<!-- .row -->
+									</form>
 								</div>
 								<!-- .with_border -->
 							</div>
@@ -115,71 +160,98 @@
 
 						<div class="row flex-row">
 							<div class="col-md-6">
-								<div class="with_border with_padding">
 
-									<h4>Security</h4>
+								<form method="POST" action="/profile/update">
+									@csrf
+									@method('PUT')
+									<input type="hidden" name="update_password">
+									<div class="with_border with_padding">
 
-									<hr>
+										<h4>Security</h4>
 
-									<div class="row form-group">
-										<label class="col-lg-3 control-label">Old password:</label>
-										<div class="col-lg-9">
-											<input type="password" class="form-control">
+										<hr>
+
+										<div class="row form-group">
+											<label class="col-lg-3 control-label">Old password:</label>
+											<div class="col-lg-9">
+												<input type="old_password" class="form-control">
+											</div>
 										</div>
-									</div>
-									<div class="row form-group">
-										<label class="col-lg-3 control-label">New password:</label>
-										<div class="col-lg-9">
-											<input type="password" class="form-control">
+										<div class="row form-group">
+											<label class="col-lg-3 control-label">New password:</label>
+											<div class="col-lg-9">
+												<input type="password" class="form-control">
+											</div>
 										</div>
-									</div>
-									<div class="row form-group">
-										<label class="col-lg-3 control-label">Repeat New password:</label>
-										<div class="col-lg-9">
-											<input type="password" class="form-control">
+										<div class="row form-group">
+											<label class="col-lg-3 control-label">Confirm password:</label>
+											<div class="col-lg-9">
+												<input type="password_confirmation" class="form-control">
+											</div>
 										</div>
-									</div>
 
 
-								</div>
+										<div class="row">
+
+											<label class="col-lg-3 control-label"></label>
+											<div class="col-lg-9">
+												<button type="submit" class="theme_button wide_button">Save</button>
+											</div>
+										</div>
+										<!-- .row -->
+									</div>
+								</form>
 								<!-- .with_border -->
 
 							</div>
 							<!-- .col-* -->
 							<div class="col-md-6">
-								<div class="with_border with_padding">
+								<form method="POST" action="/profile/update">
+									@csrf
+									@method('PUT')
+									<input type="hidden" name="update_social">
+									<div class="with_border with_padding">
 
-									<h4>Social Networks</h4>
+										<h4>Social Networks</h4>
 
-									<hr>
+										<hr>
 
-									<div class="row form-group">
-										<label class="col-lg-3 control-label">FaceBook:</label>
-										<div class="col-lg-9">
-											<input type="text" class="form-control">
+										<div class="row form-group">
+											<label class="col-lg-3 control-label">FaceBook:</label>
+											<div class="col-lg-9">
+												<input type="text" name="facebook" value="{{ $social->facebook }}" class="form-control">
+											</div>
 										</div>
-									</div>
-									<div class="row form-group">
-										<label class="col-lg-3 control-label">Twitter:</label>
-										<div class="col-lg-9">
-											<input type="text" class="form-control">
+										<div class="row form-group">
+											<label class="col-lg-3 control-label">Twitter:</label>
+											<div class="col-lg-9">
+												<input type="text" name="twitter" value="{{ $social->twitter }}" class="form-control">
+											</div>
 										</div>
-									</div>
-									<div class="row form-group">
-										<label class="col-lg-3 control-label">LinkedIn:</label>
-										<div class="col-lg-9">
-											<input type="text" class="form-control">
+										<div class="row form-group">
+											<label class="col-lg-3 control-label">LinkedIn:</label>
+											<div class="col-lg-9">
+												<input type="text"  name="linkedin" value="{{ $social->linkedin }}"class="form-control">
+											</div>
 										</div>
-									</div>
-									<div class="row form-group">
-										<label class="col-lg-3 control-label">Instagram:</label>
-										<div class="col-lg-9">
-											<input type="text" class="form-control">
+										<div class="row form-group">
+											<label class="col-lg-3 control-label">Instagram:</label>
+											<div class="col-lg-9">
+												<input type="text"  name="instagram" value="{{ $social->instagram }}"class="form-control">
+											</div>
 										</div>
-									</div>
 
-								</div>
-								<!-- .with_border -->
+										<div class="row">
+
+											<label class="col-lg-3 control-label"></label>
+											<div class="col-lg-9">
+												<button type="submit" class="theme_button wide_button">Save</button>
+											</div>
+										</div>
+										<!-- .row -->
+									</div>
+									<!-- .with_border -->
+								</form>
 							</div>
 							<!-- .col-* -->
 						</div>
