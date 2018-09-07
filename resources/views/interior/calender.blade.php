@@ -9,11 +9,17 @@
 				<div class="col-12">
 
 					<h3 class="module-title darkgrey_bg_color">Calender</h3>
-					<div class="events_calendar"></div>
+
+					{!! $calendar->calendar() !!}
 
 				</div>
 				<!-- .col-* -->
 			</div>
+
 		</div>
 	</section>
+@endsection
+
+@section('calender-script')
+	{!! $calendar->script() !!}
 @endsection

@@ -121,14 +121,14 @@
 										<div class="media small-teaser">
 											<div class="media-left media-middle">
 												<div class="teaser_icon label-success fontsize_16">
-													<i class="fa fa-comments"></i>
+													<i class="fa fa-ticket"></i>
 												</div>
 											</div>
 											<div class="media-body media-middle">
 												<strong class="grey">
-													Comments:
+													Ticket Sales:
 												</strong>
-												146
+												0
 											</div>
 										</div>
 									</li>
@@ -415,7 +415,6 @@
 													<a href="https://www.twitter.com/{{ auth()->user()->social->twitter ?: '' }}" class="social-icon soc-twitter"></a>
 													<a href="https://www.google.com/+{{ auth()->user()->social->google ?: '' }}" class="social-icon soc-google"></a>
 													<a href="https://www.linkedin.com/{{ auth()->user()->social->linkedin ?: '' }}" class="social-icon soc-linkedin"></a>
-													<a href="https://www.instagram.com/{{ auth()->user()->social->instagram ?: '' }}" class="social-icon soc-instagram"></a>
 													<a href="https://www.instagram.com/{{ auth()->user()->social->instagram ?: '' }}" class="social-icon soc-instagram"></a>
 												</p>
 											@endif

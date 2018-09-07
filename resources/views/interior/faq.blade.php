@@ -20,7 +20,7 @@
 					<ul class="nav" role="tablist">
 
 						@foreach ($allFaq as $faq)
-							<li class="active">
+							<li>
 								<a href="#vertical-tab{{ $faq->id }}" role="tab" data-toggle="tab">{{ $faq->question }}</a>
 							</li>
 						@endforeach
@@ -33,7 +33,7 @@
 					<!-- Tab panes -->
 					<div class="tab-content no-border">
 						@foreach ($allFaq as $faq)
-							<div class="tab-pane fade in active" id="vertical-tab{{ $faq->id }}">
+							<div class="tab-pane fade" id="vertical-tab{{ $faq->id }}">
 								<h3 class="topmargin_0">{{ $faq->question }}</h3>
 								<p>{{ $faq->answer }}</p>
 							</div>

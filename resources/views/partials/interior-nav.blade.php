@@ -148,14 +148,15 @@
 
 	<header class="page_header header_darkgrey">
 
-		<div class="widget widget_search">
-			<form method="get" class="searchform form-inline" action="./">
-				<div class="form-group">
-					<label class="screen-reader-text" for="widget-search-header">Search for:</label>
-					<input id="widget-search-header" type="text" value="" name="search" class="form-control" placeholder="Search">
-				</div>
-				<button type="submit" class="theme_button">Search</button>
-			</form>
+		<div class="widget widget_search" style="margin-top: 15px;">
+
+			<p>
+				<a target="_blank" class="social-icon soc-facebook " href="https://www.facebook.com/{{ config('nmbg.social.facebook') }}" ></a>
+				<a target="_blank" class="social-icon soc-twitter  " href="https://www.twitter.com/{{ config('nmbg.social.twitter') }}"></a>
+				<a target="_blank" class="social-icon soc-google   " href="https://www.google.com/+{{ config('nmbg.social.google') }}"></a>
+				<a target="_blank" class="social-icon soc-linkedin " href="https://www.linkedin.com/{{ config('nmbg.social.linkedin') }}"></a>
+				<a target="_blank" class="social-icon soc-instagram" href="https://www.instagram.com/{{ config('nmbg.social.instagram') }}"></a>
+			</p>
 		</div>
 
 

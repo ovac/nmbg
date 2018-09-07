@@ -41,7 +41,7 @@
 
 </head>
 
-<body class="admin">
+<body class="admin"  style="background-color: #000000;">
 
     @include('partials.errors', compact('errors'))
 
@@ -74,12 +74,12 @@
     <!-- Unyson messages modal -->
     <div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
         <div class="fw-messages-wrap ls with_padding">
-            <!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
-            <!--
-        <ul class="list-unstyled">
+        <!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+
+        {{-- <ul class="list-unstyled">
             <li>Message To User</li>
-        </ul>
-        -->
+        </ul> --}}
+
 
         </div>
     </div>
@@ -93,20 +93,22 @@
                 <div id="box_wrapper">
                     @include('partials.interior-nav')
                     @include('partials.breadcrumb')
-                    @yield('content')
+                    <div style="min-height: calc(100vh - 150px); ">
+                        @yield('content')
+                    </div>
 
-                    {{-- <section class="page_copyright ds darkblue_bg_color">
+                    <section class="page_copyright ds darkblue_bg_color">
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <p class="grey">&copy; Copyrights 2017</p>
+                                    <p class="grey">&copy; Copyrights 2018 D'Emperor Media Consult Ghana Limited</p>
                                 </div>
                                 <div class="col-sm-6 text-sm-right">
-                                    <p class="grey">Last account activity <i class="fa fa-clock-o"></i> 52 mins ago</p>
+                                    <p class="grey">Designed by  <i class="fa fa-computer"></i> <a href="https://www.ovac4u.com">OVAC4U - www.ovac4u.com</a></p>
                                 </div>
                             </div>
                         </div>
-                    </section> --}}
+                    </section>
                 </div>
                 <!-- eof #box_wrapper -->
             </div>
@@ -142,6 +144,7 @@
     <!-- dashboard init -->
     <script src="/js/admin.js"></script>
     @yield('show-error-modal')
+    @yield('calender-script')
 </body>
 
 </html>
