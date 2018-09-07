@@ -112,7 +112,9 @@ class ProfileController extends Controller
             $request->exists('update_password') &&
             Hash::check(
                 $request->input('old_password'),
-                ($user = auth()->user())->password)) {
+                ($user = auth()->user())->password
+            )
+        ) {
 
             $validatedData = $request->validate([
                 'password' => 'required|string|min:6|confirmed',
