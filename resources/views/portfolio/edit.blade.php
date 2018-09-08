@@ -125,3 +125,13 @@
 		<!-- .container -->
 	</section>
 @endsection
+
+
+@section('active-page')
+	<li>
+		<a href="/portfolio">Personal Portfolio</a>
+	</li>
+	<li class="active">
+		<a href="#"> Edit Picture ID#: {{ $picture->id }} </a>
+	</li>
+@endsection

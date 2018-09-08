@@ -186,3 +186,14 @@
 	</section>
 
 @endsection
+
+
+
+@section('active-page')
+	<li>
+		<a href="/orders">Ticket Orders</a>
+	</li>
+	<li class="active">
+		<a href="/orders/{{ $order->id }}">Order ID#: {{ $order->id }}</a>
+	</li>
+@endsection

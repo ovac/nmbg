@@ -4,9 +4,9 @@
 			<div class="col-md-6">
 				<ol class="breadcrumb darklinks">
 					<li>
-						<a href="#">Dashboard</a>
+						<a href="/dashboard">Dashboard</a>
 					</li>
-					<li class="active">Profile</li>
+					@yield('active-page')
 				</ol>
 			</div>
 			<!-- .col-* -->

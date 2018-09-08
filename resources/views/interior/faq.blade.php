@@ -50,3 +50,10 @@
 		<!-- .container -->
 	</section>
 @endsection
+
+
+@section('active-page')
+	<li class="active">
+		<a href="/faq">Frequently Asked Questions</a>
+	</li>
+@endsection

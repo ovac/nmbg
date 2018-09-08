@@ -114,3 +114,13 @@
 		</form>
 	</section>
 @endsection
+
+
+@section('active-page')
+	<li>
+		<a href="/portfolio">Personal Portfolio</a>
+	</li>
+	<li class="active">
+		<a href="#"> Add a new picture. </a>
+	</li>
+@endsection

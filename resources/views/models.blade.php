@@ -69,23 +69,25 @@
 
 				@foreach (\App\User::whereHas('profile')->get() as $model)
 
-					<div class="isotope-item col-xlg-6 col-lg-3 col-sm-4 active">
-						<div class="vertical-item gallery-title-item text-center">
-							<div class="item-media">
-								<img src="{{ $model->profile->avatar }}" alt="" />
-								<div class="media-links">
-									<div class="links-wrap">
-										<a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="{{ $model->profile->avatar }}"></a>
+					@if ($model->isSubscribed())
+						<div class="isotope-item col-xlg-6 col-lg-3 col-sm-4 active">
+							<div class="vertical-item gallery-title-item text-center">
+								<div class="item-media">
+									<img src="{{ $model->profile->avatar }}" alt="" />
+									<div class="media-links">
+										<div class="links-wrap">
+											<a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="{{ $model->profile->avatar }}"></a>
+										</div>
 									</div>
 								</div>
 							</div>
+							<div class="item-title text-center">
+								<h4>
+									<a href="/models/{{ $model->username }}">{{ $model->name }}</a>
+								</h4>
+							</div>
 						</div>
-						<div class="item-title text-center">
-							<h4>
-								<a href="/models/{{ $model->username }}">{{ $model->name }}</a>
-							</h4>
-						</div>
-					</div>
+					@endif
 				@endforeach
 
 			</div>

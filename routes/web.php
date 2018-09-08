@@ -32,9 +32,10 @@ Route::group(['middleware' => ['auth', 'setup-profile']], function () {
     Route::view('pay', 'pay');
     Route::resource('faq', 'FaqController');
     Route::view('comments', 'interior.comments');
-    Route::resource('calender', 'CalenderController');
+    Route::resource('calendar', 'CalenderController');
     Route::resource('orders', 'TicketOrderController');
     Route::get('profile/edit', 'ProfileController@edit');
+    Route::resource('subscribe', 'SubscriptionController');
     Route::resource('profile', 'ProfileController');
     Route::post('profile/edit', 'ProfileController@update');
     Route::resource('portfolio', 'PersonalPictureController');

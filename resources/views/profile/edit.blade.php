@@ -281,3 +281,14 @@
 		<!-- .container -->
 	</section>
 @endsection
+
+
+@section('active-page')
+	<li>
+		<a href="/profile">Profile</a>
+	</li>
+
+	<li class="active">
+		<a href="#">Editing Profile</a>
+	</li>
+@endsection

@@ -56,4 +56,9 @@ class User extends \TCG\Voyager\Models\User
     {
         return $this->hasMany(PersonalPicture::class);
     }
+
+    public function isSubscribed()
+    {
+        return false;
+    }
 }

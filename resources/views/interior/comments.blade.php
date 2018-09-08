@@ -62,3 +62,9 @@
 		</div>
 	</section>
 @endsection
+
+@section('active-page')
+	<li class="active">
+		<a href="/comments">Comments</a>
+	</li>
+@endsection

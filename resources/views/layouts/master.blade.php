@@ -73,12 +73,25 @@
 
     <!-- Unyson messages modal -->
     <div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
-        <div class="fw-messages-wrap ls with_padding">
+        <div class="fw-messages-wrap">
         <!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
 
-        {{-- <ul class="list-unstyled">
-            <li>Message To User</li>
-        </ul> --}}
+        @unless (auth()->user()->isSubscribed() || request()->is('subscribe'))
+
+            <ul class="list-unstyled">
+                <div class="alert alert-danger">
+                    <center>
+                        Kindly complete your payment via mobile money or contact us for to make your payment manually.
+                        <hr>
+                        <a href="/subscribe">
+                            <button>Click here to make your payment online</button>
+                        </a>
+                        <hr>
+                        or contact @foreach (explode(', ', config('nmbg.contact.phone')) as $phone){{ $phone }}{{ $loop->last ? '' : ', ' }}@endforeach
+                    </center>
+                </div>
+            </ul>
+        @endif
 
 
         </div>
@@ -94,6 +107,21 @@
                     @include('partials.interior-nav')
                     @include('partials.breadcrumb')
                     <div style="min-height: calc(100vh - 150px); ">
+
+                        @unless (auth()->user()->isSubscribed()  || request()->is('subscribe'))
+                            <div class="alert alert-danger">
+                                <center>
+                                    Kindly complete your payment via mobile money or contact us for to make your payment manually.
+                                    <hr>
+                                    <a href="/subscribe">
+                                        <button>Click here to make your payment online</button>
+                                    </a>
+                                    <hr>
+                                    or contact @foreach (explode(', ', config('nmbg.contact.phone')) as $phone){{ $phone }}{{ $loop->last ? '' : ', ' }}@endforeach
+                                </center>
+                            </div>
+                        @endif
+
                         @yield('content')
                     </div>
 

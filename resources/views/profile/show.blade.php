@@ -504,3 +504,10 @@
 		<!-- .container -->
 	</section>
 @endsection
+
+
+@section('active-page')
+	<li class="active">
+		<a href="#">Profile</a>
+	</li>
+@endsection

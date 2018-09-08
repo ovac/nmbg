@@ -91,9 +91,9 @@
 					<h3 class="dark_bg_color">Pages</h3>
 					<ul class="menu-click">
 						<li>
-							<a href="/calender">
+							<a href="/calendar">
 								<i class="fa fa-calendar-o"></i>
-								Calender
+								Calendar
 							</a>
 						</li>
 						<li>

@@ -154,3 +154,10 @@
 	</section>
 
 @endsection
+
+
+@section('active-page')
+	<li class="active">
+		<a href="/orders">Ticket Orders</a>
+	</li>
+@endsection

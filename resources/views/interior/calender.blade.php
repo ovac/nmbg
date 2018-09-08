@@ -20,6 +20,12 @@
 	</section>
 @endsection
 
+@section('active-page')
+	<li class="active">
+		<a href="/calendar">Calendar</a>
+	</li>
+@endsection
+
 @section('calender-script')
 	{!! $calendar->script() !!}
 @endsection
