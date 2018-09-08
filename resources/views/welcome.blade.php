@@ -840,7 +840,6 @@
             <div class="row">
                 <div class="col-sm-12 text-center">
                     <h2 class="section_header">Our Blog</h2>
-                    <p class="small-text highlight lusitana">Latest trends of the industry</p>
                 </div>
             </div>
             <div class="row">
