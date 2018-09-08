@@ -114,6 +114,11 @@
 							title="Facebook"
 						></a>
 						<a
+							class="social-icon border-icon round soc-instagram"
+							href="https://www.instagram.com/{{ config('nmbg.social.instagram') }}"
+							title="Instagram"
+						></a>
+						<a
 							class="social-icon border-icon round soc-twitter"
 							href="https://www.twitter.com/{{ config('nmbg.social.twitter') }}"
 							title="Twitter"

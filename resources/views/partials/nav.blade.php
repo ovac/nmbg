@@ -7,9 +7,6 @@
         <li>
             <a href="/about">About</a>
         </li>
-        <li>
-            <a href="/terms">Terms</a>
-        </li>
         <!-- eof features -->
         {{-- <!-- gallery -->
         <li>
@@ -20,7 +17,13 @@
         <li>
             <a href="/contact">Contact</a>
         </li>
+        <li>
+            <a href="/blogs">Blog</a>
+        </li>
         <!-- eof contacts -->
+        <li>
+            <a href="/terms">Terms</a>
+        </li>
         <li>
             <a href="/login">Login</a>
         </li>

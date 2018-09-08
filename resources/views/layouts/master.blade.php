@@ -122,6 +122,14 @@
                             </div>
                         @endif
 
+                        @if (session()->has('message'))
+                            <div class="alert alert-info">
+                                <center>
+                                    {{ session('message') }}
+                                </center>
+                            </div>
+                        @endif
+
                         @yield('content')
                     </div>
 

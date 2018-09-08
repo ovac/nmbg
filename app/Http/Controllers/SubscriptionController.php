@@ -74,7 +74,11 @@ class SubscriptionController extends Controller
             return back()->withErrors($e->getMessage())->withInput();
         }
 
-        return 'A payment prompt has been sent to your phone: ' . $request->input('phone') . '. Please complete the prompt.';
+        session([
+            'message' => 'A payment prompt has been sent to your phone: ' . $request->input('phone') . '. Please complete the prompt.',
+        ]);
+
+        return back()->withCookies();
     }
 
     /**

@@ -208,6 +208,7 @@
         </div>
     </section>
 
+
     <section id="about" class="ds ms page_about parallax section_padding_100 columns_padding_25 columns_margin_bottom_30">
         <div class="container">
             <div class="row">
@@ -834,7 +835,7 @@
         </div>
     </section> --}}
 
-    {{-- <section class="ds section_padding_100 columns_margin_bottom_20">
+    <section class="ds section_padding_100 columns_margin_bottom_20">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
@@ -843,110 +844,44 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <article class="vertical-item content-padding with_background bottom_color_border text-center">
-                        <div class="item-media">
-                            <img src="images/gallery/03.jpg" alt="">
-                            <div class="media-links">
-                                <a href="blog-single-right.html" class="abs-link"></a>
+                @foreach (App\Blog::get()->take(3) as $blog)
+                    <div class="col-md-4 col-sm-6">
+                        <article class="vertical-item content-padding with_background bottom_color_border text-center">
+                            <div class="item-media">
+                                @if ($blog->image)
+                                    <img src="{{ $blog->image }}" alt="">
+                                @elseif($blog->video)
+                                    <img src="https://img.youtube.com/vi/{{ $blog->video }}/0.jpg" class="fluid" alt="">
+                                @endif
+
+                                <div class="media-links">
+                                    <a href="/blogs/{{ $blog->id }}" class="abs-link"></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="item-content">
-                            <header class="entry-header">
-                                <span class="entry-date highlight lusitana">
-                                    <time class="entry-date" datetime="2017-03-13T08:50:40+00:00">
-                                        March 13, 2017
-                                    </time>
-                                </span>
-                                <h3 class="entry-title">
-                                    <a href="blog-single-right.html">
-                            To Keep Makeup...
-                        </a>
-                                </h3>
-                                <p>
-                        Bacon alcatra shankle meatloaf kevin. Capicola pork beef ribs ball tip. Strip steak turkey drumstick sirloin...
-                    </p>
-                                <p>
-                        <a class="social-icon theme-color-icon soc-facebook" href="#" title="Facebook"></a>
-                        <a class="social-icon theme-color-icon soc-twitter" href="#" title="Twitter"></a>
-                        <a class="social-icon theme-color-icon soc-google" href="#" title="Google"></a>
-                    </p>
-                            </header>
+                            <div class="item-content">
+                                <header class="entry-header">
+                                    <span class="entry-date highlight lusitana">
+                                        <time class="entry-date" datetime="{{ $blog->created_at }}">
+                                            {{ $blog->created_at }}
+                                        </time>
+                                    </span>
+                                    <h3 class="entry-title">
+                                        <a href="/blogs/{{ $blog->id }}">
+                                            {{ $blog->title }}
+                                        </a>
+                                    </h3>
+                                    <p>
+                                        {{ $blog->entry }}
+                                    </p>
+                                </header>
 
-                        </div>
-                    </article>
-                </div>
-
-                <div class="col-md-4 col-sm-6">
-                    <article class="vertical-item content-padding with_background bottom_color_border text-center">
-                        <div class="item-media">
-                            <img src="images/gallery/04.jpg" alt="">
-                            <div class="media-links">
-                                <a href="blog-single-right.html" class="abs-link"></a>
                             </div>
-                        </div>
-                        <div class="item-content">
-                            <header class="entry-header">
-                                <span class="entry-date highlight lusitana">
-                                    <time class="entry-date" datetime="2017-03-13T08:50:40+00:00">
-                                        March 16, 2017
-                                    </time>
-                                </span>
-                                <h3 class="entry-title">
-                                    <a href="blog-single-right.html">
-                            Luxury Watches...
-                        </a>
-                                </h3>
-                                <p>
-                        Short ribs t-bone bresaola jerky pastrami ham hock filet mignon. Picanha turkey tail, shank fatback bresaola...
-                    </p>
-                                <p>
-                        <a class="social-icon theme-color-icon soc-facebook" href="#" title="Facebook"></a>
-                        <a class="social-icon theme-color-icon soc-twitter" href="#" title="Twitter"></a>
-                        <a class="social-icon theme-color-icon soc-google" href="#" title="Google"></a>
-                    </p>
-                            </header>
-
-                        </div>
-                    </article>
-                </div>
-
-                <div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0">
-                    <article class="vertical-item content-padding with_background bottom_color_border text-center">
-                        <div class="item-media">
-                            <img src="images/gallery/05.jpg" alt="">
-                            <div class="media-links">
-                                <a href="blog-single-right.html" class="abs-link"></a>
-                            </div>
-                        </div>
-                        <div class="item-content">
-                            <header class="entry-header">
-                                <span class="entry-date highlight lusitana">
-                                    <time class="entry-date" datetime="2017-03-13T08:50:40+00:00">
-                                        March 16, 2017
-                                    </time>
-                                </span>
-                                <h3 class="entry-title">
-                                    <a href="blog-single-right.html">
-                            Is The Herbal Way...
-                        </a>
-                                </h3>
-                                <p>
-                        Filet mignon tongue kielbasa t-bone. Pork belly pork short loin, fatback pancetta corned beef tenderloin hamburger...
-                    </p>
-                                <p>
-                        <a class="social-icon theme-color-icon soc-facebook" href="#" title="Facebook"></a>
-                        <a class="social-icon theme-color-icon soc-twitter" href="#" title="Twitter"></a>
-                        <a class="social-icon theme-color-icon soc-google" href="#" title="Google"></a>
-                    </p>
-                            </header>
-
-                        </div>
-                    </article>
-                </div>
+                        </article>
+                    </div>
+                @endforeach
             </div>
         </div>
-    </section> --}}
+    </section>
 
     {{-- <section id="contacts" class="cs background_cover page_banner section_padding_top_65 section_padding_bottom_65">
         <div class="container">
