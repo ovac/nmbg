@@ -2,9 +2,9 @@
 
 namespace App;
 
+use App\CalenderEvent;
 use Illuminate\Database\Eloquent\Model;
 use MaddHatter\LaravelFullcalendar\Event;
-use TCG\Voyager\Facades\Voyager;
 
 class CalenderEvent extends Model implements Event
 {
@@ -85,7 +85,7 @@ class CalenderEvent extends Model implements Event
 
     public function getUrl()
     {
-        if (Voyager::can('edit_calender_events')) {
+        if (auth()->user()->can('browse', app(CalenderEvent::class))) {
             return '/admin/calender-events/' . $this->id . '/edit';
         }
     }

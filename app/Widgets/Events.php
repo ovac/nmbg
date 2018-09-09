@@ -4,7 +4,6 @@ namespace App\Widgets;
 
 use App\CalenderEvent;
 use Illuminate\Support\Str;
-use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Widgets\BaseDimmer;
 
 class Events extends BaseDimmer
@@ -44,6 +43,6 @@ class Events extends BaseDimmer
      */
     public function shouldBeDisplayed()
     {
-        return Voyager::can('edit_calender_events');
+        return auth()->user()->can('browse', app(CalenderEvent::class));
     }
 }

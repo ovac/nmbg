@@ -4,7 +4,6 @@ namespace App\Widgets;
 
 use App\Blog;
 use Illuminate\Support\Str;
-use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Widgets\BaseDimmer;
 
 class Blogs extends BaseDimmer
@@ -44,6 +43,6 @@ class Blogs extends BaseDimmer
      */
     public function shouldBeDisplayed()
     {
-        return Voyager::can('edit_blogs');
+        return auth()->user()->can('browse', app(Blog::class));
     }
 }
