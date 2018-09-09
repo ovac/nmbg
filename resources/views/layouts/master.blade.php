@@ -81,7 +81,7 @@
             <ul class="list-unstyled">
                 <div class="alert alert-danger">
                     <center>
-                        Kindly complete your payment via mobile money or contact us for to make your payment manually.
+                        Kindly complete your payment via mobile money or contact us to make your payment manually.
                         <hr>
                         <a href="/subscribe">
                             <button>Click here to make your payment online</button>
@@ -111,7 +111,7 @@
                         @unless (auth()->user()->isSubscribed()  || request()->is('subscribe'))
                             <div class="alert alert-danger">
                                 <center>
-                                    Kindly complete your payment via mobile money or contact us for to make your payment manually.
+                                    Kindly complete your payment via mobile money or contact us to make your payment manually.
                                     <hr>
                                     <a href="/subscribe">
                                         <button>Click here to make your payment online</button>

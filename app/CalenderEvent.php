@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use MaddHatter\LaravelFullcalendar\Event;
+use TCG\Voyager\Facades\Voyager;
 
 class CalenderEvent extends Model implements Event
 {
@@ -77,7 +78,15 @@ class CalenderEvent extends Model implements Event
     {
         return [
             'color' => $this->background_color,
-            //etc
+
+            'url' => $this->getUrl(),
         ];
+    }
+
+    public function getUrl()
+    {
+        if (Voyager::can('edit_calender_events')) {
+            return '/admin/calender-events/' . $this->id . '/edit';
+        }
     }
 }
