@@ -34,7 +34,7 @@ class User extends \TCG\Voyager\Models\User
 
     public function getNameAttribute()
     {
-        return $this->first_name . ' ' . $this->last_name;
+        return $this->attributes['name'] ?: $this->first_name . ' ' . $this->last_name;
     }
 
     public function profile()
