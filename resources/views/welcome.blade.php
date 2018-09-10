@@ -848,13 +848,13 @@
                         <article class="vertical-item content-padding with_background bottom_color_border text-center">
                             <div class="item-media">
                                 @if ($blog->image)
-                                    <img src="/{{ $blog->image }}" alt="">
+                                    <img src="{{ $blog->image }}" alt="">
                                 @elseif($blog->video)
                                     <img src="https://img.youtube.com/vi/{{ $blog->video }}/0.jpg" class="fluid" alt="">
                                 @endif
 
                                 <div class="media-links">
-                                    <a href="/blogs/{{ $blog->id }}" class="abs-link"></a>
+                                    <a href="blogs/{{ $blog->id }}" class="abs-link"></a>
                                 </div>
                             </div>
                             <div class="item-content">
