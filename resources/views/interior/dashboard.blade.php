@@ -15,7 +15,7 @@
 							<h3 class="sparklines-title">
 								<sup>Today Sales:</sup>
 
-								GHC0.00
+								{{ config('nmbg.currency') }}0.00
 
 								<span class="sparklines" data-values="0" data-type="bar" data-line-color="#eeb269" data-neg-color="#dc5753" data-height="30" data-bar-width="2">
 								</span>
@@ -24,7 +24,7 @@
 
 							<h3 class="sparklines-title">
 								<sup>Yesterday Sales: </sup>
-								GHC0.00
+								{{ config('nmbg.currency') }}0.00
 
 								<span class="sparklines" data-values="0" data-type="bar" data-line-color="#4db19e" data-neg-color="#007ebd" data-height="30" data-bar-width="2">
 								</span>
@@ -62,7 +62,7 @@
 							<div class="teaser info_bg_color counter-background-teaser text-center">
 								<span class="counter counter-background" data-from="0" data-to="15" data-speed="1800">0</span>
 								<h3 class="counter-wrap highlight" data-from="0" data-to="0" data-speed="1800">
-									<small>GHC</small>
+									<small>{{ config('nmbg.currency') }}</small>
 									<span class="counter" data-from="0" data-to="0" data-speed="1500">0</span>
 								</h3>
 								<p>Total Sale</p>
@@ -135,7 +135,7 @@
 													<div class="media-body">
 														<h5>
 															Total
-															<small>GHC{{ $order->price }}</small>
+															<small>{{ config('nmbg.currency') }}{{ $order->price }}</small>
 														</h5>
 														@if ($order->comment)
 															<div>
@@ -188,7 +188,7 @@
 													<div class="media-body">
 														<h5>
 															Product Name
-															<small>GHC{{ $order->price }}</small>
+															<small>{{ config('nmbg.currency') }}{{ $order->price }}</small>
 														</h5>
 														@if ($order->comment)
 															<div>

@@ -40,14 +40,14 @@
 											</td>
 											<td class="media-middle">
 												<strong>
-													GHC{{ $order->ticket->price }}
+													{{ config('nmbg.currency') }}{{ $order->ticket->price }}
 												</strong>
 											</td>
 											<td class="media-middle">
 												{{ $order->quantity }}
 											</td>
 											<td class="media-middle">
-												GHC{{ $order->total }}
+												{{ config('nmbg.currency') }}{{ $order->total }}
 											</td>
 										</tr>
 									@endforeach
@@ -108,7 +108,7 @@
 										<strong class="grey">
 											Order Total:
 										</strong>
-										GHC{{ $order->total }}
+										{{ config('nmbg.currency') }}{{ $order->total }}
 									</div>
 								</div>
 							</li>

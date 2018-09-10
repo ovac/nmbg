@@ -110,7 +110,7 @@
 											<time datetime="{{ $order->created_at }}" class="entry-date">{{ $order->created_at }}</time>
 										</td>
 										<td class="media-middle">
-											GHC{{ $order->total }}
+											{{ config('nmbg.currency') }}{{ $order->total }}
 										</td>
 
 										<td class="media-middle">
