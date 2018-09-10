@@ -79,7 +79,6 @@ class ProfileController extends Controller
         // Handle requests from the
         // UpdateProfile form
         if ($request->exists('update_profile')) {
-
             $validatedData = $request->validate([
                 'avatar' => 'required|image',
                 'level' => 'required|string',
@@ -88,12 +87,9 @@ class ProfileController extends Controller
             ]);
 
             auth()->user()->profile->update($validatedData);
-        }
-
-        // Handle requests from the
+        } // Handle requests from the
         // UpdateAccount form
         elseif ($request->exists('update_account')) {
-
             $validatedData = $request->validate([
                 'first_name' => 'required|string|max:255',
                 'last_name' => 'required|string|max:255',
@@ -104,27 +100,24 @@ class ProfileController extends Controller
             ]);
 
             auth()->user()->update($validatedData);
-        }
-
-        // Handle requests from the
+        } // Handle requests from the
         // UpdatePassword form
-        elseif (
-            $request->exists('update_password') &&
-            Hash::check(
-                $request->input('old_password'),
-                ($user = auth()->user())->password
-            )
-        ) {
+        elseif ($request->exists('update_password')) {
+            if (!Hash::check($request->old_password, ($user = auth()->user())->password)) {
+                return back()->withErrors('Incorrect password');
+            }
 
             $validatedData = $request->validate([
                 'password' => 'required|string|min:6|confirmed',
             ]);
 
-            $user->password = $validatedData['password'];
+            $user->password = bcrypt($validatedData['password']);
             $user->save();
-        }
 
-        // Handle requests from the
+            session([
+                'message' => 'Password changed successfully.',
+            ]);
+        } // Handle requests from the
         // UpdateSocial form
         elseif ($request->exists('update_social')) {
             $validatedData = $request->validate([
