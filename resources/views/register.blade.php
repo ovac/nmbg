@@ -151,6 +151,13 @@
 							</div>
 
 							<div class="col-sm-12">
+								<br>
+								<div class="form-group" id="password_confirmation_field">
+									<label for="terms" class="form-control"><input type="checkbox" name="terms" id="terms"> I agree to be bound by the <a href="/terms" style="color: #ef90a4;">terms and conditions</a></label>
+								</div>
+							</div>
+
+							<div class="col-sm-12">
 
 								<button type="submit" class="theme_button wide_button color1 topmargin_40">Register Now</button>
 								<button type="reset" class="theme_button wide_button">Clear Form</button>

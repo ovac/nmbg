@@ -26,6 +26,14 @@ class SubscribeRequest extends FormRequest
         return [
             'phone' => 'required|numeric',
             'channel' => 'required|string|in:mtn-gh,airtel-gh,vodafone-gh,tigo-gh',
+            'agree' => 'accepted',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'agree.accepted' => 'You must agree to the terms to continue',
         ];
     }
 }

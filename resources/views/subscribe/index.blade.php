@@ -45,6 +45,17 @@
 									</div>
 								</div>
 
+								<div class="row">
+
+									<label class="col-lg-3 control-label"></label>
+									<div class="col-lg-9">
+										<div class="well">
+											<p class="text-info"><b>Note:</b> By clicking 'Send Prompt', you agree to be charged GHC100 for your registration/participate in the contest for this year's event to the phone number above.</p>
+
+											<label for="agree" class="form-control"><input type="checkbox" name="agree" id="agree"> I agree</label>
+										</div>
+									</div>
+								</div>
 
 								<div class="row">
 

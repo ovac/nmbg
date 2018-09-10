@@ -63,7 +63,7 @@ return [
      */
     'tokens' => [
 
-        'instagram' => env('INSTAGRAM_TOKEN', '253601294.1677ed0.f92b1909bb5b47ed9d9a2f0718b86d7a'),
+        'instagram' => env('INSTAGRAM_TOKEN', '1693091603.1677ed0.806df2fc28964354acecd91225170b5d'),
     ],
 
 ];
