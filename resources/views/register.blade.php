@@ -17,8 +17,9 @@
 		</div>
 	</section>
 
+	<section class="ds section_padding_bottom_100">
 
-	<section class="ds section_padding_top_100 section_padding_bottom_100">
+		<br>
 		<div class="container">
 
 			<div class="row">
