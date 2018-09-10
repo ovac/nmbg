@@ -32,7 +32,7 @@
 
 							@if ($blog->image)
 								<div class="entry-thumbnail item-media">
-									<img src="{{ $blog->image }}" alt="">
+									<img src="/{{ $blog->image }}" alt="">
 								</div>
 							@endif
 
@@ -112,7 +112,7 @@
 							@if ($prevBlog)
 								<div class="col-md-6">
 									<div class="with_padding_small text-center ds bg_teaser after_cover darkgrey_bg">
-										<img src="{{ $prevBlog->image }}" alt="">
+										<img src="/{{ $prevBlog->image }}" alt="">
 										<div class="item-content">
 											<div class="small-text highlightlinks">
 												<a href="/blogs/{{ $prevBlog->id }}">Prev</a>
@@ -129,7 +129,7 @@
 							@if ($nextBlog)
 								<div class="col-md-6">
 									<div class="with_padding_small text-center ds bg_teaser after_cover darkgrey_bg">
-										<img src="{{ $nextBlog->image }}" alt="">
+										<img src="/{{ $nextBlog->image }}" alt="">
 										<div class="item-content">
 											<div class="small-text highlightlinks">
 												<a href="/blogs/{{ $nextBlog->id }}">Next</a>
