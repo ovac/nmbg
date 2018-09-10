@@ -1,5 +1,16 @@
 @extends('layouts.app')
 
+@php
+    // Create a new instagram instance.
+    $instagram = new \Vinkla\Instagram\Instagram(config('nmbg.tokens.instagram'));
+
+    // Fetch recent user media items.
+    $instagram->media();
+
+    // Fetch user information.
+    $pictures = collect($instagram->media())->take(6);
+@endphp
+
 @section('content')
     <section class="intro_section page_mainslider ds">
 
@@ -876,6 +887,25 @@
 
                             </div>
                         </article>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <section class="ds section_padding_100 columns_margin_bottom_20">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2 class="section_header">Instagram Feed</h2>
+                </div>
+            </div>
+            <div class="row">
+                @foreach ($pictures as $picture)
+                    <div class="col-md-4 col-sm-6">
+                         <a href="{{ $picture->link }}" target="_blank">
+                            <img src="{{ $picture->images->low_resolution->url }}">
+                        </a>
                     </div>
                 @endforeach
             </div>
