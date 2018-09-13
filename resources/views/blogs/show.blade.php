@@ -128,6 +128,8 @@
 										<!-- eof .item-content -->
 									</div>
 								</div>
+							@else
+								<div class="col-md-6"></div>
 							@endif
 
 							@if ($nextBlog)
