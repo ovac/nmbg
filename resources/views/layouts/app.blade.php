@@ -27,6 +27,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="/favicon.ico">
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/animations.css">
