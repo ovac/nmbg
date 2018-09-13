@@ -122,6 +122,20 @@
         <!-- eof flexslider -->
     </section>
 
+    <section class="ds ms">
+        <div class="container">
+            <div class="row columns_padding_0">
+                <div class="col-sm-12">
+                    <div class="embed-responsive embed-responsive-3by2">
+                        <a href="https://www.youtube.com/embed/_rGnxVq5KRc" class="embed-placeholder">
+                            <img src="https://img.youtube.com/vi/_rGnxVq5KRc/0.jpg" style="width: 100%;" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="ds section_padding_100 columns_margin_bottom_20">
         <div class="container">
             <div class="row">
@@ -218,7 +232,6 @@
             </div>
         </div>
     </section>
-
 
     <section id="about" class="ds ms page_about parallax section_padding_100 columns_padding_25 columns_margin_bottom_30">
         <div class="container">
