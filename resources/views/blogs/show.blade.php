@@ -112,7 +112,11 @@
 							@if ($prevBlog)
 								<div class="col-md-6">
 									<div class="with_padding_small text-center ds bg_teaser after_cover darkgrey_bg">
-										<img src="{{ $prevBlog->image }}" alt="">
+										@if ($prevBlog->image)
+		                                    <img src="{{ $prevBlog->image }}" alt="">
+		                                @elseif($prevBlog->video)
+		                                    <img src="https://img.youtube.com/vi/{{ $prevBlog->video }}/0.jpg" class="fluid" alt="">
+		                                @endif
 										<div class="item-content">
 											<div class="small-text highlightlinks">
 												<a href="/blogs/{{ $prevBlog->id }}">Prev</a>
@@ -129,7 +133,12 @@
 							@if ($nextBlog)
 								<div class="col-md-6">
 									<div class="with_padding_small text-center ds bg_teaser after_cover darkgrey_bg">
-										<img src="{{ $nextBlog->image }}" alt="">
+
+		                                @if ($nextBlog->image)
+		                                    <img src="{{ $nextBlog->image }}" alt="">
+		                                @elseif($nextBlog->video)
+		                                    <img src="https://img.youtube.com/vi/{{ $nextBlog->video }}/0.jpg" class="fluid" alt="">
+		                                @endif
 										<div class="item-content">
 											<div class="small-text highlightlinks">
 												<a href="/blogs/{{ $nextBlog->id }}">Next</a>
