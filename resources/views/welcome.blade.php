@@ -867,7 +867,7 @@
                 </div>
             </div>
             <div class="row">
-                @foreach (App\Blog::get()->take(3) as $blog)
+                @foreach (App\Blog::get()->take(3)->orderBy('DESC'); as $blog)
                     <div class="col-md-4 col-sm-6">
                         <article class="vertical-item content-padding with_background bottom_color_border text-center">
                             <div class="item-media">
