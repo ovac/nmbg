@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <h2 class="section_header">Our Blog</h2>
+                    <h2 class="section_header">News</h2>
                 </div>
             </div>
             <div class="row">
