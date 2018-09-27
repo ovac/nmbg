@@ -140,92 +140,27 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <h2 class="section_header">Nigeria's Most Beautiful Ghana 2018 Prizes</h2>
+                    <h2 class="section_header">Nigeria's Most Beautiful Ghana 2018 Grand Prize</h2>
                 </div>
             </div>
 
             <div class="row price-row">
-                <div class="col-md-4 col-sm-6">
-                    <ul class="price-table with_background grey style1">
-                        <li class="plan-name">
-                            <h3>First Runner Up</h3>
-                        </li>
-                        <li class="plan-price grey main_bg_color2">
-                            <b>
-                                <span>C</span>5,000.00
-                                <div class="plan-description small-text lusitana">CASH PRIZE</div>
-                            </b>
-                        </li>
-                        <li class="plan-price grey main_bg_color2">
-                            <span>Movie Contract</span>
-                            <div class="plan-description small-text lusitana">Complementary</div>
-                        </li>
-                        {{-- <li class="features-list">
-                            <ul>
-                                <li>Meatball kielbasa ball</li>
-                                <li>Boudin jerky shank</li>
-                                <li>Venison ham ham</li>
-                                <li>Turducken kielbasa sausage</li>
-                                <li>Tri-tip beef ribs</li>
-                            </ul>
-                        </li>
-                        <li class="call-to-action">
-                            <a href="#" class="theme_button inverse">select now</a>
-                        </li> --}}
-                    </ul>
-                </div>
 
-                <div class="col-md-4 col-sm-6 col-md-push-4">
-                    <ul class="price-table with_background grey style1">
-                        <li class="plan-name">
-                            <h3>Second Runner Up</h3>
-                        </li>
-                        <li class="plan-price grey main_bg_color2">
-                            <span>C</span>3,000.00
-                            <div class="plan-description small-text lusitana">CASH PRIZE</div>
-                        </li>
-                        <li class="plan-price grey main_bg_color2">
-                            <span>Look Book</span>
-                            <div class="plan-description small-text lusitana">Complementary</div>
-                        </li>
-                        {{-- <li class="features-list">
-                            <ul>
-                                <li>Official Car</li>
-                                <li>Ribs alcatra pork andouille</li>
-                                <li>Rump biltong jerky</li>
-                                <li>Sirloin porchetta swine</li>
-                                <li>Brisket pork pork chop</li>
-                            </ul>
-                        </li>
-                        <li class="call-to-action">
-                            <a href="#" class="theme_button inverse">select now</a>
-                        </li> --}}
-                    </ul>
-                </div>
-
-                <div class="col-md-4 col-sm-6 col-md-pull-4 col-sm-offset-3 col-md-offset-0">
+                <div class="col-md-4  col-md-offset-4 {{-- col-sm-12 col-md-pull-4 col-sm-offset-3 col-md-offset-0 --}}">
                     <ul class="price-table with_background grey style1 centered">
                         <li class="plan-name">
                             <h3>Winner</h3>
                         </li>
                         <li class="plan-price grey main_bg_color2">
-                            <span>C</span>10,000.00
-                            <div class="plan-description small-text lusitana">Cash Prize</div>
+                            Cash Prize
+                            {{-- <div class="plan-description small-text lusitana">Cash Prize</div> --}}
                         </li>
                         <li class="plan-price grey main_bg_color2">
                             <span>Official Car</span>
-                            <div class="plan-description small-text lusitana">Complementary</div>
                         </li>
-                        {{-- <li class="features-list">
-                            <ul>
-                                <li>Tenderloin strip steak</li>
-                                <li>Cow sausage filet</li>
-                                <li>Mignon t-bone sirloin</li>
-                                <li>Shank ham hock</li>
-                                <li>Tongue leberkas pastrami</li>
-                                <li>Beef ribs cow chicken</li>
-                            </ul>
-                        </li> --}}
+                        <li class="plan-price grey main_bg_color2">
+                            <div class="plan-description small-text lusitana">All Expense paid trip.</div>
+                        </li>
                     </ul>
                 </div>
 
