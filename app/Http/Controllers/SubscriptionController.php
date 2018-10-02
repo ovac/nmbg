@@ -31,7 +31,7 @@ class SubscriptionController extends Controller
      */
     public function subscribe(User $user, Request $request)
     {
-        if ($request->has('Data') && $request->ResponseCode === "0000") {
+        if ($request->has('Data')) {
             $subscription = new Subscribtion;
 
             $subscription->user_id = $user->id;
