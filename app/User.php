@@ -52,6 +52,11 @@ class User extends \TCG\Voyager\Models\User
         return $this->hasMany(TicketOrder::class);
     }
 
+    public function subscription()
+    {
+        return $this->hasMany(Subscribtion::class);
+    }
+
     public function personalPictures()
     {
         return $this->hasMany(PersonalPicture::class);
@@ -59,6 +64,6 @@ class User extends \TCG\Voyager\Models\User
 
     public function isSubscribed()
     {
-        return false;
+        return $this->subscription()->whereDate('created_at', '<', now()->addYears(1))->count();
     }
 }

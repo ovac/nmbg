@@ -30,6 +30,8 @@ Route::group(['middleware' => ['auth']], function () {
     });
 });
 
+Route::post('subscription-activation/{user}', 'SubscriptionController@subscribe');
+
 Route::group(['middleware' => ['auth', 'setup-profile']], function () {
     Route::view('pay', 'pay');
     Route::resource('faq', 'FaqController');
@@ -44,7 +46,6 @@ Route::group(['middleware' => ['auth', 'setup-profile']], function () {
     Route::resource('nmbg-portfolio', 'NMBGPictureController');
     Route::get('home', 'DashboardController@dashboard')->name('dashboard');
     Route::get('dashboard', 'DashboardController@dashboard')->name('dashboard');
-
 });
 
 Route::group(['prefix' => 'admin'], function () {

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SubscribeRequest;
+use App\Subscribtion;
+use App\User;
 use Illuminate\Http\Request;
 use OVAC\LaravelHubtelPayment\Facades\HubtelPayment;
 
@@ -27,9 +29,23 @@ class SubscriptionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function subscribe(User $user, Request $request)
     {
-        //
+        if ($request->has('Data') && $request->ResponseCode === "0000") {
+            $subscription = new Subscribtion;
+
+            $subscription->user_id = $user->id;
+            $subscription->amount = $request->input('Data.Amount');
+            $subscription->charges = $request->input('Data.Charges');
+            $subscription->token = $request->input('Data.TransactionId');
+            $subscription->description = $request->input('Data.Description');
+            $subscription->transaction_id = $request->input('Data.ExternalTransactionId');
+            $subscription->amount_after_charges = $request->input('Data.AmountAfterCharges');
+
+            $subscription->save();
+        }
+
+        return 200;
     }
 
     /**
@@ -73,55 +89,6 @@ class SubscriptionController extends Controller
             return back()->withErrors($e->getMessage())->withInput();
         }
 
-        session([
-            'message' => 'A payment prompt has been sent to your phone: ' . $request->input('phone') . '. Please complete the prompt.',
-        ]);
-
-        return back();
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return back()->withErrors('A payment prompt has been sent to your phone: ' . $request->input('phone') . '. Please complete the prompt.');
     }
 }
