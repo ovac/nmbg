@@ -80,7 +80,7 @@ class SubscriptionController extends Controller
                 ->channel($request->input('channel'))
 
             //- The URL to send callback after payment.
-                ->callback('https://webhook.site/9287cbcb-5952-4544-8949-586d1c70b725')
+                ->callback('https://nigeriamostbeautifulghana.com/subscription-activation/' . auth()->id())
 
             //- Run the transaction after required data.
                 ->run();
