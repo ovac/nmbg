@@ -80,7 +80,7 @@ class SubscriptionController extends Controller
                 ->channel($request->input('channel'))
 
             //- The URL to send callback after payment.
-                ->callback(url('/subscription-activation/' . auth()->id()))
+                ->callback(url('subscription-activation/' . auth()->id()))
 
             //- Run the transaction after required data.
                 ->run();
