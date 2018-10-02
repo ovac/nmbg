@@ -41,7 +41,6 @@ class SubscriptionController extends Controller
     public function store(SubscribeRequest $request)
     {
         try {
-
             // NOTE:
             // The phone number must be of type string as
             // Laravel considers all numbers with a
@@ -78,7 +77,7 @@ class SubscriptionController extends Controller
             'message' => 'A payment prompt has been sent to your phone: ' . $request->input('phone') . '. Please complete the prompt.',
         ]);
 
-        return back()->withCookies();
+        return back();
     }
 
     /**
