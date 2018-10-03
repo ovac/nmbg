@@ -26,7 +26,7 @@ return [
      */
     'subscription' => [
 
-        'price' => 0.01,
+        'price' => 100.00,
 
     ],
 
