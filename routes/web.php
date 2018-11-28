@@ -14,6 +14,7 @@
 Auth::routes();
 
 Route::view('/', 'welcome')->name('welcome');
+Route::view('/another', 'welcome')->name('welcome');
 Route::view('about', 'about')->name('about');
 Route::view('terms', 'terms')->name('terms');
 Route::resource('models', 'ModelController');
